@@ -4,15 +4,40 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from "@angular/flex-layout";
+
+import { MaterialModule } from './modules/material.module';
+
+import { AboutComponent, HomeComponent, TagsComponent } from './components';
+import { CategoryService, TagService, QuestionService } from './services';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent,
+    HomeComponent,
+    TagsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    HttpModule,
+    BrowserAnimationsModule,
+    FlexLayoutModule,
+
+    MaterialModule
   ],
-  providers: [],
+  providers: [
+    CategoryService,
+    TagService,
+    QuestionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

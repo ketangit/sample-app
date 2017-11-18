@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { ObservableMedia } from '@angular/flex-layout';
 
 @Component({
-  selector: 'sample-root',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'sample';
+  constructor(private observableMedia: ObservableMedia) { }
 }
