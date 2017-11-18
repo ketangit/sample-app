@@ -1,37 +1,42 @@
-# SampleApp
+
+# Sample AngularJS Web App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
+Node 6.9.0 or higher and NPM 3 or higher dependencies are required
 
-## Development server
+## Installation 
+~~~
+npm install -g @angular/cli
+npm install -g yarn
+ng set --global packageManager=yarn
+~~~
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Create new sample-app
+~~~
+ng new sample-app --prefix sample --style scss --routing
+~~~
 
-## Code scaffolding
+## Installing Dependencies 
+~~~
+cd sample-app
+npm install --save @angular/material @angular/animations @angular/cdk
+npm install --save @angular/flex-layout
+npm install --save hammerjs
+npm install --save-dev json-server
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ng generate component home --module app
+ng generate component about --module app
+~~~
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-
-https://material2-demoapp.firebaseapp.com/
-
-https://rwa-trivia.firebaseapp.com/
-
-https://blog.realworldfullstack.io/real-world-angular-part-2-its-a-material-world-2d70238ef8ef
-
-## Start JSON Server
+## Start Development server
+~~~
+yarn start
 npm run api
+~~~
+
+## Used below sites for 
+* https://material2-demoapp.firebaseapp.com/
+* https://rwa-trivia.firebaseapp.com/
+* https://blog.realworldfullstack.io/real-world-angular-part-2-its-a-material-world-2d70238ef8ef
+* https://alligator.io/angular/angular-material-2/
+* https://coursetro.com/posts/code/29/Working-with-Angular-2-Material
