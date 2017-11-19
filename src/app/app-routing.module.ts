@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AboutComponent, HomeComponent, TagsComponent } from './components/index';
+import { AboutComponent, HomeComponent, TagsComponent, NetworkGraphComponent } from './components/index';
 
 const routes: Routes = [
   {
@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path: 'about/:id',
     component: AboutComponent
+  },
+  {
+    path: 'network',
+    component: NetworkGraphComponent
   },
   {
     path: 'tags',

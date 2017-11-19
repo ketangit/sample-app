@@ -23,9 +23,12 @@ npm install --save @angular/material @angular/animations @angular/cdk
 npm install --save @angular/flex-layout
 npm install --save hammerjs
 npm install --save-dev json-server
+npm install --save vis
 
 ng generate component home --module app
 ng generate component about --module app
+ng generate component tags --module app
+ng generate component networkgraph --module app
 ~~~
 
 ## Start Development server
@@ -34,7 +37,8 @@ yarn start
 npm run api
 ~~~
 
-## Used below sites for 
+## Reference sites
+* https://zavoloklom.github.io/material-design-iconic-font/icons.html
 * https://material2-demoapp.firebaseapp.com/
 * https://rwa-trivia.firebaseapp.com/
 * https://blog.realworldfullstack.io/real-world-angular-part-2-its-a-material-world-2d70238ef8ef

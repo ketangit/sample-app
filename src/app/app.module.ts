@@ -12,7 +12,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { MaterialModule } from './modules/material.module';
 
-import { AboutComponent, HomeComponent, TagsComponent } from './components';
+import { AboutComponent, HomeComponent, TagsComponent, NetworkGraphComponent } from './components';
 import { CategoryService, TagService, QuestionService } from './services';
 
 @NgModule({
@@ -20,7 +20,8 @@ import { CategoryService, TagService, QuestionService } from './services';
     AppComponent,
     AboutComponent,
     HomeComponent,
-    TagsComponent
+    TagsComponent,
+    NetworkGraphComponent
   ],
   imports: [
     BrowserModule,
