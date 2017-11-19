@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { MaterialModule } from './modules/material.module';
+import './rxjs-extensions';
 
 import { AboutComponent, HomeComponent, TagsComponent, NetworkGraphComponent } from './components';
 import { CategoryService, TagService, QuestionService } from './services';

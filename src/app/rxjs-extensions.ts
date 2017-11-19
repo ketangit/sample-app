@@ -1,3 +1,8 @@
+/*
+    Avoiding duplication of RxJS operator imports
+    https://loiane.com/2017/08/angular-rxjs-imports/
+*/
+
 // Observable class extensions
 import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/throw';

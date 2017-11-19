@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import '../rxjs-extensions';
 
 import { Question, Category } from '../model';
 import { CategoryService } from './category.service';

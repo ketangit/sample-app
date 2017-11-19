@@ -17,11 +17,6 @@
         <span mat-line>Tags</span>
         <span mat-line class="secondary">Tags</span>
       </a>
-      <a mat-list-item (click)="sidenav.close()" [routerLink]="['/questions']">
-        <mat-icon mat-list-icon>question_answer</mat-icon>
-        <span mat-line>Questions</span>
-        <span mat-line class="secondary">Questions</span>
-      </a>
     </mat-nav-list>
   </mat-sidenav>
 
@@ -43,7 +38,7 @@
       <mat-icon>settings</mat-icon>
       <span>Settings</span>
     </button>
-    <button mat-menu-item>
+    <button mat-menu-item (click)="showAbout()">
       <mat-icon>info</mat-icon>
       <span>About</span>
     </button>

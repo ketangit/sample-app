@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-about',
@@ -8,16 +8,10 @@ import { ActivatedRoute, Router } from '@angular/router';
   encapsulation: ViewEncapsulation.None
 })
 export class AboutComponent implements OnInit {
-
-  constructor(private route: ActivatedRoute, private router: Router) {
-    this.route.params.subscribe(res => console.log(res.id));
-  }
-
-  sendMeHome() {
-    this.router.navigate(['']);
-  }
+  constructor(
+    private dialogRef: MatDialogRef<AboutComponent>
+  ) { }
 
   ngOnInit() {
   }
-
 }

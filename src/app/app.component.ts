@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ObservableMedia } from '@angular/flex-layout';
+import { MatDialog, MatDialogRef } from '@angular/material';
+import { AboutComponent } from './components/index';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +9,11 @@ import { ObservableMedia } from '@angular/flex-layout';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private observableMedia: ObservableMedia) { }
+  aboutDialogRef: MatDialogRef<AboutComponent>;
+
+  constructor(private observableMedia: ObservableMedia, private dialog: MatDialog) { }
+
+  showAbout() {
+    this.aboutDialogRef = this.dialog.open(AboutComponent, { disableClose: false });
+  }
 }

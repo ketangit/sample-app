@@ -15,6 +15,8 @@ import {
     MatInputModule
 } from '@angular/material';
 
+import { MatDialogModule } from '@angular/material/dialog';
+
 @NgModule({
     imports: [],
     exports: [
@@ -29,7 +31,9 @@ import {
         MatCheckboxModule,
         MatChipsModule,
         MatFormFieldModule,
-        MatInputModule
+        MatInputModule,
+
+        MatDialogModule
     ]
 })
 export class MaterialModule { }

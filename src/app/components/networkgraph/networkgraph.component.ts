@@ -71,22 +71,24 @@ export class NetworkGraphComponent implements OnInit {
     };
     // get Unicode from http://zavoloklom.github.io/material-design-iconic-font/icons.html
     var optionGroups = {
-      engine: { shape: 'icon', icon: { face: 'Material-Design-Iconic-Font', code: '\uf3d7', size: 50, color: '#2B7CE9' } },
-      job: { shape: 'icon', icon: { face: 'Material-Design-Iconic-Font', code: '\uf3dc', size: 50, color: '#2B7CE9' } },
-      task: { shape: 'icon', icon: { face: 'Material-Design-Iconic-Font', code: '\uf16e', size: 50, color: '#2B7CE9' } },
-      done: { shape: 'icon', icon: { face: 'Material-Design-Iconic-Font', code: '\uf3b6', size: 50, color: '#2B7CE9' } }
+      engine: { shape: 'icon', icon: { face: 'Material-Design-Iconic-Font', code: '\uf3d7', size: 50, color: '#109618' } }, // green
+      job: { shape: 'icon', icon: { face: 'Material-Design-Iconic-Font', code: '\uf3dc', size: 50, color: '#5A1E5C' } }, // purple
+      task: { shape: 'icon', icon: { face: 'Material-Design-Iconic-Font', code: '\uf16e', size: 50, color: '#2B7CE9' } }, // blue
+      done: { shape: 'icon', icon: { face: 'Material-Design-Iconic-Font', code: '\uf3b6', size: 50, color: '#FF9900' } } // orange
     };
     var options = {
       clickToUse: false,
       edges: {
+        smooth: {
+          forceDirection: 'none',
+          roundness: 0
+        },
         arrows: 'to',
-        color: '#1abc9c',
+        color: '#1ABC9C',
         shadow: true
       },
-      smooth: {
-        enabled: true,
-        type: 'curvedCW',
-        roundness: 0.1
+      physics: {
+        enabled: false
       },
       layout: {
         hierarchical: {

@@ -1,6 +1,18 @@
-<p>
-  This is what I'm all about.
-  <a href="" (click)="sendMeHome()">
-    <strong>Take me back</strong>
-  </a>.
-</p>
+<h1 mat-dialog-title>About Sample App</h1>
+<mat-dialog-content>
+  <h4>Build using below npm modules:</h4>
+  <ul>
+    <li>
+      <a href="https://angular.io">Angular</a> Javascript Framework version 5.x
+    </li>
+    <li>
+      <a href="https://material.angular.io">Angular Material 2</a> for components, styles, fonts and icons
+    </li>
+    <li>
+      <a href="https://github.com/angular/flex-layout/wiki">Angular Flex Layout</a> for Responsive layout
+    </li>
+  </ul>
+</mat-dialog-content>
+<mat-dialog-actions class="flex-container" fxLayout="column">
+  <button mat-button type="button" mat-dialog-close>Close</button>
+</mat-dialog-actions>
