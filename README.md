@@ -26,6 +26,9 @@ Installing npm package dependencies
  cd sample-app
  npm install --save @angular/material @angular/animations @angular/cdk
  npm install --save @angular/flex-layout
+ npm install --save material-design-icons
+ npm install --save typeface-roboto
+ npm install --save material-design-iconic-font
  npm install --save hammerjs
  npm install --save-dev json-server
  npm install --save vis
