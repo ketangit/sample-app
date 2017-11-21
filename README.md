@@ -47,3 +47,4 @@ Creating new components
 * https://blog.realworldfullstack.io/real-world-angular-part-2-its-a-material-world-2d70238ef8ef
 * https://alligator.io/angular/angular-material-2/
 * https://coursetro.com/posts/code/29/Working-with-Angular-2-Material
+* https://loiane.com/2017/09/continuous-integration-with-angular-cli-travis-ci-firebase-greenkeeper-github/
