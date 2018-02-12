@@ -1,21 +1,17 @@
-import { Injectable }    from '@angular/core';
-import { Headers, Http } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
-import '../rxjs-extensions';
-
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Rx';
 import { Category } from '../model/category';
 
 @Injectable()
 export class CategoryService {
 
-  private _serviceUrl = 'http://localhost:3000/categories';  // URL to web api
+  private _serviceUrl: string = 'http://localhost:3000/categories';  // URL to web api
 
-  constructor(private http: Http) { 
+  constructor(private http: HttpClient) {
   }
 
   getCategories(): Observable<Category[]> {
-    let url = this._serviceUrl;
-    return this.http.get(url)
-               .map(res => res.json() );
+    return this.http.get<Category[]>(this._serviceUrl);
   }
 }
