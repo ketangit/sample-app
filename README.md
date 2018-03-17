@@ -1,70 +1,81 @@
 # Sample Angular Web application
-* This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.8
+
+* This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3
 * It uses [Angular](https://angular.io) javascript framework version 5.x
 * It uses [Angular Material 2](https://material.angular.io) components, styles, fonts and icons
-* It uses [Angular Flex Layout] (https://github.com/angular/flex-layout/wiki) for Responsive layout
-* Node 6.9.0 or higher and NPM 3 or higher dependencies are required
-
+* It uses [Angular Flex Layout](https://github.com/angular/flex-layout/wiki) for Responsive layout
+* Node 8.10.0 or higher and NPM 5.6.0 or higher dependencies are required
 
 ### Run locally
-~~~
+
+```
 yarn install
 yarn start
 npm run api
-~~~
+```
 
+```
+npm shrinkwrap
+npm shrinkwrap --dev
+```
 
 ### Tested with
-~~~
-Angular CLI: 1.6.8
-Node: 6.11.5
-Angular: 5.2.4
-Yarn: 1.3.2
-OS: win32 x64
-~~~
 
+```
+Node: 8.10.0
+NPM: 5.6.0
+Yarn: 1.5.1
+Angular CLI: 1.7.3
+Angular: 5.2.4
+OS: win32 x64
+```
 
 ### Quick Installation Instructions
-~~~
+
+```
 npm install -g @angular/cli@latest
 npm install -g yarn
 ng set --global packageManager=yarn
-~~~
-
+```
 
 ### Upgrade Angular CLI to the latest version
-~~~
+
+```
 npm install -g @angular/cli@latest
-~~~
-Or uninstall and re-install 
-~~~
+```
+
+Or uninstall and re-install
+
+```
 npm uninstall -g angular-cli
 npm cache clean
 npm install -g @angular/cli@latest
-~~~
+```
+
 Depending on your system, you may need to prefix the above commands with sudo.
 
-
 ### Update Angular CLI for local project
-~~~
+
+```
 rm -rf node_modules
 npm uninstall --save-dev angular-cli
 npm install --save-dev @angular/cli@latest
 npm install
-~~~
+```
 
 ### Update Yarn CLI
-~~~
-npm install -g yarn
-~~~
 
+```
+npm install -g yarn
+```
 
 ### Steps for creating this application
-~~~
+
+```
 Create new application using ng-cli
  ng new sample-app --prefix sample --style scss --routing
 
-Installing npm package dependencies 
+Installing npm package dependencies
  cd sample-app
  npm install --save @angular/material @angular/animations @angular/cdk
  npm install --save @angular/flex-layout
@@ -72,17 +83,57 @@ Installing npm package dependencies
  npm install --save typeface-roboto
  npm install --save material-design-iconic-font
  npm install --save hammerjs
- npm install --save-dev json-server
  npm install --save vis
+ npm install --save-dev json-server
 
 Creating new components
  ng generate component home --module app
  ng generate component about --module app
  ng generate component tags --module app
  ng generate component networkgraph --module app
-~~~
+```
 
-### Reference sites
+### Add Apollo/GraphQL to the Application
+
+```
+Installing npm package dependencies
+ cd sample-app
+ npm install apollo-angular apollo-angular-link-http apollo-client apollo-cache-inmemory --save
+ npm install graphql-tag graphql --save
+
+Apollo codegen
+ npm install -g apollo-codegen
+ npm install -g graphql-code-generator
+
+ apollo-codegen introspect-schema http://localhost:8080/graphql --output schema.json
+ gql-gen --file schema.json --template typescript
+```
+
+### Create Docker image for static site
+
+```
+Build Docker image
+ docker build -t sample-app .  
+Run Docker Image
+ docker run --name sample-app -p 80:80 -d sample-app
+Run Bash Shell
+ docker exec -it sample-app bash
+```
+
+### VSCode hot keys
+
+```
+Windows:
+ (Ctrl+Shift+P) Open Command Palette
+ (Ctrl+K Ctrl+S) Keyboard Shortcuts
+ (Ctrl+K V) Markdown: Open Preview to the Side
+
+Mac:
+```
+
+### Credit / Prior Art
+
+* https://www.sitepoint.com/beginners-guide-node-package-manager/
 * https://zavoloklom.github.io/material-design-iconic-font/icons.html
 * https://material2-demoapp.firebaseapp.com/
 * https://rwa-trivia.firebaseapp.com/

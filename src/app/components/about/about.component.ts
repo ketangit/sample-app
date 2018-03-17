@@ -8,10 +8,7 @@ import { MatDialogRef } from '@angular/material';
   encapsulation: ViewEncapsulation.None
 })
 export class AboutComponent implements OnInit {
-  constructor(
-    private dialogRef: MatDialogRef<AboutComponent>
-  ) { }
+  constructor(private dialogRef: MatDialogRef<AboutComponent>) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }

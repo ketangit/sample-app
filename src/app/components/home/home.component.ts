@@ -1,8 +1,14 @@
-import { Component, Input, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
-import { Observable } from 'rxjs/Rx';
+import {
+  Component,
+  Input,
+  OnInit,
+  OnDestroy,
+  ViewEncapsulation
+} from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
 import { Question } from '../../model';
-import { QuestionService } from '../../services'
+import { QuestionService } from '../../services';
 
 @Component({
   selector: 'app-home',
@@ -14,14 +20,17 @@ export class HomeComponent implements OnInit, OnDestroy {
   questions: Question[];
   sub: any;
 
-  constructor(private questionService: QuestionService) { }
+  constructor(private questionService: QuestionService) {}
 
   ngOnInit() {
-    this.sub = this.questionService.getQuestions().subscribe(questions => this.questions = questions);
+    this.sub = this.questionService
+      .getQuestions()
+      .subscribe(questions => (this.questions = questions));
   }
 
   ngOnDestroy() {
-    if (this.sub)
+    if (this.sub) {
       this.sub.unsubscribe();
+    }
   }
 }

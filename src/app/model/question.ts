@@ -1,4 +1,4 @@
-import { Category } from './category'
+import { Category } from './category';
 
 export class Question {
   id: number;
@@ -17,7 +17,7 @@ export class Question {
   lastUpdatedOn?: Date;
   approvedBy1?: string;
   approvedOn?: Date;
-  
+
   constructor() {
     this.id = 0;
     this.answers = [new Answer(), new Answer(), new Answer(), new Answer()];

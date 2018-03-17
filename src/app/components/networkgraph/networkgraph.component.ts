@@ -11,10 +11,10 @@ export class NetworkGraphComponent implements OnInit {
   public edges: Edge;
   public network: Network;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
-    var nodes = new DataSet([
+    const nodes = new DataSet([
       { id: 1, label: 'Engine', group: 'engine' },
       { id: 2, label: 'Job 1', group: 'job' },
       { id: 3, label: 'Job 2', group: 'job' },
@@ -40,7 +40,7 @@ export class NetworkGraphComponent implements OnInit {
       { id: 23, label: 'Done', group: 'done' }
     ]);
     // create an array with edges
-    var edges = new DataSet([
+    const edges = new DataSet([
       { from: 1, to: 2 },
       { from: 1, to: 3 },
       { from: 1, to: 4 },
@@ -65,18 +65,50 @@ export class NetworkGraphComponent implements OnInit {
       { from: 15, to: 23 }
     ]);
     // create a network
-    var data = {
+    const data = {
       nodes: nodes,
       edges: edges
     };
     // get Unicode from http://zavoloklom.github.io/material-design-iconic-font/icons.html
-    var optionGroups = {
-      engine: { shape: 'icon', icon: { face: 'Material-Design-Iconic-Font', code: '\uf3d7', size: 50, color: '#109618' } }, // green
-      job: { shape: 'icon', icon: { face: 'Material-Design-Iconic-Font', code: '\uf3dc', size: 50, color: '#5A1E5C' } }, // purple
-      task: { shape: 'icon', icon: { face: 'Material-Design-Iconic-Font', code: '\uf16e', size: 50, color: '#2B7CE9' } }, // blue
-      done: { shape: 'icon', icon: { face: 'Material-Design-Iconic-Font', code: '\uf3b6', size: 50, color: '#FF9900' } } // orange
+    const optionGroups = {
+      engine: {
+        shape: 'icon',
+        icon: {
+          face: 'Material-Design-Iconic-Font',
+          code: '\uf3d7',
+          size: 50,
+          color: '#109618'
+        }
+      }, // green
+      job: {
+        shape: 'icon',
+        icon: {
+          face: 'Material-Design-Iconic-Font',
+          code: '\uf3dc',
+          size: 50,
+          color: '#5A1E5C'
+        }
+      }, // purple
+      task: {
+        shape: 'icon',
+        icon: {
+          face: 'Material-Design-Iconic-Font',
+          code: '\uf16e',
+          size: 50,
+          color: '#2B7CE9'
+        }
+      }, // blue
+      done: {
+        shape: 'icon',
+        icon: {
+          face: 'Material-Design-Iconic-Font',
+          code: '\uf3b6',
+          size: 50,
+          color: '#FF9900'
+        }
+      } // orange
     };
-    var options = {
+    const options = {
       clickToUse: false,
       edges: {
         smooth: {
@@ -97,8 +129,7 @@ export class NetworkGraphComponent implements OnInit {
       },
       groups: optionGroups
     };
-    var container = document.getElementById('network');
-    var network = new Network(container, data, options);
+    const container = document.getElementById('network');
+    const network = new Network(container, data, options);
   }
-
 }

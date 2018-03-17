@@ -11,9 +11,14 @@ import { AboutComponent } from './components/index';
 export class AppComponent {
   aboutDialogRef: MatDialogRef<AboutComponent>;
 
-  constructor(private observableMedia: ObservableMedia, private dialog: MatDialog) { }
+  constructor(
+    private observableMedia: ObservableMedia,
+    private dialog: MatDialog
+  ) {}
 
   showAbout() {
-    this.aboutDialogRef = this.dialog.open(AboutComponent, { disableClose: false });
+    this.aboutDialogRef = this.dialog.open(AboutComponent, {
+      disableClose: false
+    });
   }
 }

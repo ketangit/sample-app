@@ -6,12 +6,13 @@ describe('NetworkGraphComponent', () => {
   let component: NetworkGraphComponent;
   let fixture: ComponentFixture<NetworkGraphComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [NetworkGraphComponent]
+  beforeEach(
+    async(() => {
+      TestBed.configureTestingModule({
+        declarations: [NetworkGraphComponent]
+      }).compileComponents();
     })
-      .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(NetworkGraphComponent);

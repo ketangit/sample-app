@@ -1,7 +1,13 @@
-import { Component, Input, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
-import { Observable } from 'rxjs/Rx';
+import {
+  Component,
+  Input,
+  OnInit,
+  OnDestroy,
+  ViewEncapsulation
+} from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
-import { TagService } from '../../services'
+import { TagService } from '../../services';
 
 @Component({
   selector: 'tag-list',
@@ -13,14 +19,15 @@ export class TagsComponent implements OnInit, OnDestroy {
   tags: string[];
   sub: any;
 
-  constructor(private tagService: TagService) { }
+  constructor(private tagService: TagService) {}
 
   ngOnInit() {
-    this.sub = this.tagService.getTags().subscribe(tags => this.tags = tags);
+    this.sub = this.tagService.getTags().subscribe(tags => (this.tags = tags));
   }
 
   ngOnDestroy() {
-    if (this.sub)
+    if (this.sub) {
       this.sub.unsubscribe();
+    }
   }
 }

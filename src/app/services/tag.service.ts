@@ -1,16 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class TagService {
-
-  private _serviceUrl: string = 'http://localhost:3000/tagList';  // URL to web api
-
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   getTags(): Observable<string[]> {
-    return this.http.get<string[]>(this._serviceUrl);
+    return this.http.get<string[]>(environment.api + '/tagList');
   }
 }
