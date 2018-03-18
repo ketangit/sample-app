@@ -380,6 +380,12 @@
       "version": "0.8.2",
       "dev": true
     },
+    "ag-grid": {
+      "version": "17.0.0"
+    },
+    "ag-grid-angular": {
+      "version": "17.0.0"
+    },
     "agent-base": {
       "version": "2.1.1",
       "dev": true,

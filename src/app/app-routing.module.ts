@@ -4,7 +4,8 @@ import {
   AboutComponent,
   HomeComponent,
   TagsComponent,
-  NetworkGraphComponent
+  NetworkGraphComponent,
+  ProductComponent
 } from './components/index';
 
 const routes: Routes = [
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'tags',
     component: TagsComponent
+  },
+  {
+    path: 'product',
+    component: ProductComponent
   }
 ];
 

@@ -84,13 +84,21 @@ Installing npm package dependencies
  npm install --save material-design-iconic-font
  npm install --save hammerjs
  npm install --save vis
+ npm install --save ag-grid-angular ag-grid
  npm install --save-dev json-server
 
 Creating new components
- ng generate component home --module app
- ng generate component about --module app
- ng generate component tags --module app
- ng generate component networkgraph --module app
+ ng generate component components/home --module app
+ ng generate component components/about --module app
+ ng generate component components/tags --module app
+ ng generate component components/networkgraph --module app
+ ng generate component components/product --module app
+
+Creating new services
+ ng generate service services/cateory --module app --spec false
+ ng generate service services/question --module app --spec false
+ ng generate service services/tag --module app --spec false
+ ng generate service services/product --module app --spec false
 ```
 
 ### Add Apollo/GraphQL to the Application
@@ -129,6 +137,13 @@ Windows:
  (Ctrl+K V) Markdown: Open Preview to the Side
 
 Mac:
+```
+
+### AG-Grid
+
+```
+ag-grid Using matrial degin theme
+ https://www.ag-grid.com/javascript-grid-themes/material-theme.php
 ```
 
 ### Credit / Prior Art

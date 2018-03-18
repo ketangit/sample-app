@@ -1,17 +1,11 @@
-import {
-  Component,
-  Input,
-  OnInit,
-  OnDestroy,
-  ViewEncapsulation
-} from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 import { Question } from '../../model';
 import { QuestionService } from '../../services';
 
 @Component({
-  selector: 'app-home',
+  selector: 'sample-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   encapsulation: ViewEncapsulation.None

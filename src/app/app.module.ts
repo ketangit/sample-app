@@ -11,15 +11,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialModule } from './modules/material.module';
+
+import { AgGridModule } from 'ag-grid-angular/main';
+
 import './rxjs-extensions';
 
 import {
   AboutComponent,
   HomeComponent,
   TagsComponent,
-  NetworkGraphComponent
+  NetworkGraphComponent,
+  ProductComponent
 } from './components';
-import { CategoryService, TagService, QuestionService } from './services';
+import {
+  CategoryService,
+  TagService,
+  QuestionService,
+  ProductService
+} from './services';
 
 @NgModule({
   declarations: [
@@ -27,7 +36,8 @@ import { CategoryService, TagService, QuestionService } from './services';
     AboutComponent,
     HomeComponent,
     TagsComponent,
-    NetworkGraphComponent
+    NetworkGraphComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -37,10 +47,10 @@ import { CategoryService, TagService, QuestionService } from './services';
     HttpModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-
-    MaterialModule
+    MaterialModule,
+    AgGridModule.withComponents([ProductComponent])
   ],
-  providers: [CategoryService, TagService, QuestionService],
+  providers: [CategoryService, TagService, QuestionService, ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

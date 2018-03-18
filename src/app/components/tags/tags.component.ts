@@ -1,16 +1,10 @@
-import {
-  Component,
-  Input,
-  OnInit,
-  OnDestroy,
-  ViewEncapsulation
-} from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 import { TagService } from '../../services';
 
 @Component({
-  selector: 'tag-list',
+  selector: 'sample-tag-list',
   templateUrl: './tags.component.html',
   styleUrls: ['./tags.component.scss'],
   encapsulation: ViewEncapsulation.None

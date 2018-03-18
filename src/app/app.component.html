@@ -17,6 +17,11 @@
         <span mat-line>Tags</span>
         <span mat-line class="secondary">Tags</span>
       </a>
+      <a mat-list-item (click)="sidenav.close()" [routerLink]="['/product']">
+        <mat-icon mat-list-icon>view_week</mat-icon>
+        <span mat-line>Product</span>
+        <span mat-line class="secondary">Product</span>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
 
