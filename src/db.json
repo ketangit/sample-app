@@ -1,379 +1,1502 @@
 {
-    "categories": [
+  "categories": [
+    {
+      "id": 1,
+      "categoryName": "Special"
+    },
+    {
+      "id": 2,
+      "categoryName": "Programming"
+    },
+    {
+      "id": 3,
+      "categoryName": "Architecture"
+    },
+    {
+      "id": 4,
+      "categoryName": "Networking/Infrastructure"
+    },
+    {
+      "id": 5,
+      "categoryName": "Database"
+    },
+    {
+      "id": 6,
+      "categoryName": "Dev Ops"
+    },
+    {
+      "id": 7,
+      "categoryName": "UX/UI"
+    }
+  ],
+  "tagList": [
+    "C#",
+    "iOS",
+    "Objective-C",
+    "Swift",
+    "Mobile",
+    "Cloud",
+    "AWS",
+    "Azure",
+    "Open Source",
+    "NoSql",
+    "SQL",
+    "SQL Server",
+    "MongoDB",
+    "CI",
+    "Selenium",
+    "Agile",
+    "Scrum",
+    "Waterfall",
+    "SDLC",
+    "BI",
+    "IoT",
+    "Social",
+    "Windows",
+    "iPhone",
+    "Analytics",
+    "Data",
+    "UX",
+    "UI",
+    "Python",
+    "VB",
+    ".Net",
+    "ASP.Net",
+    "Unity",
+    "DI",
+    "EF",
+    "ORM",
+    "Spring",
+    "Hibernate",
+    "Oracle",
+    "DB2",
+    "Java",
+    "Ruby",
+    "Rails",
+    "MySQL",
+    "Postgres",
+    "Enterprise",
+    "Active Directory",
+    "C",
+    "C++",
+    "REST",
+    "API",
+    "SDK",
+    "SharePoint",
+    "CRM",
+    "Dynamics CRM",
+    "Salesforce",
+    "JavaScript",
+    "AngularJS",
+    "MVC",
+    "MVP",
+    "MVVM",
+    "View",
+    "Controller",
+    "Model",
+    "Cassandra",
+    "DocumentDB",
+    "ColumnDB",
+    "Elastic Search",
+    "Neo4J",
+    "GraphDB",
+    "KeyValue",
+    "Hadoop",
+    "HBase",
+    "Pig",
+    "Hive",
+    "Zookeeper",
+    "Linux",
+    "Mac OS",
+    "Motherboard",
+    "Apache",
+    "Cordova",
+    "SPA",
+    "PhoneGap",
+    "Universal Apps",
+    "Xamarin",
+    "Eclipse",
+    "PHP",
+    "T-SQL",
+    "Stored Procedure",
+    "Trigger",
+    "NTFS",
+    "Journaled",
+    "BootCamp",
+    "Office 365",
+    "POP",
+    "IMAP",
+    "SMTP",
+    "TCP/IP",
+    "IP Address",
+    "Domain Controller",
+    "DNS",
+    "DHCP",
+    "SATA",
+    "USB",
+    "HDMI",
+    "Firewire",
+    "Lightening",
+    "Edison",
+    "Galileo",
+    "Arduino",
+    "Rasberry Pi",
+    "TypeScript",
+    "CoffeeScript",
+    "jQuery",
+    "3D Printer",
+    "CAD",
+    "Photoshop",
+    "Illustrator",
+    "jpg",
+    "png",
+    "Partition",
+    "Unix",
+    "kernel",
+    "SOAP",
+    "Authentication",
+    "OAuth",
+    "OpenID",
+    "BitCoin",
+    "ASP",
+    "Mainframe",
+    "Storyboard",
+    "XCode",
+    "AirDrop",
+    "Bluetooth",
+    "BLE",
+    "ApplePay",
+    "App Store",
+    "Metal",
+    "Pattern",
+    "Distributed",
+    "GIT"
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "questionText":
+        "Which of the following function of Array object reverses the order of the elements of an array?",
+      "answers": [
         {
-            "id": 1,
-            "categoryName": "Special"
+          "id": 1,
+          "answerText": "reverse()",
+          "correct": true
         },
         {
-            "id": 2,
-            "categoryName": "Programming"
+          "id": 2,
+          "answerText": "push()",
+          "correct": false
         },
         {
-            "id": 3,
-            "categoryName": "Architecture"
+          "id": 3,
+          "answerText": "reduce()",
+          "correct": false
         },
         {
-            "id": 4,
-            "categoryName": "Networking/Infrastructure"
-        },
-        {
-            "id": 5,
-            "categoryName": "Database"
-        },
-        {
-            "id": 6,
-            "categoryName": "Dev Ops"
-        },
-        {
-            "id": 7,
-            "categoryName": "UX/UI"
+          "id": 4,
+          "answerText": "reduceRight()",
+          "correct": false
         }
-    ],
-    "tagList": [
-        "C#",
-        "iOS",
-        "Objective-C",
-        "Swift",
-        "Mobile",
-        "Cloud",
-        "AWS",
-        "Azure",
-        "Open Source",
-        "NoSql",
-        "SQL",
-        "SQL Server",
-        "MongoDB",
-        "CI",
-        "Selenium",
-        "Agile",
-        "Scrum",
-        "Waterfall",
-        "SDLC",
-        "BI",
-        "IoT",
-        "Social",
-        "Windows",
-        "iPhone",
-        "Analytics",
-        "Data",
-        "UX",
-        "UI",
-        "Python",
-        "VB",
-        ".Net",
-        "ASP.Net",
-        "Unity",
-        "DI",
-        "EF",
-        "ORM",
-        "Spring",
-        "Hibernate",
-        "Oracle",
-        "DB2",
-        "Java",
-        "Ruby",
-        "Rails",
-        "MySQL",
-        "Postgres",
-        "Enterprise",
-        "Active Directory",
-        "C",
-        "C++",
-        "REST",
-        "API",
-        "SDK",
-        "SharePoint",
-        "CRM",
-        "Dynamics CRM",
-        "Salesforce",
-        "JavaScript",
-        "AngularJS",
-        "MVC",
-        "MVP",
-        "MVVM",
-        "View",
-        "Controller",
-        "Model",
-        "Cassandra",
-        "DocumentDB",
-        "ColumnDB",
-        "Elastic Search",
-        "Neo4J",
-        "GraphDB",
-        "KeyValue",
-        "Hadoop",
-        "HBase",
-        "Pig",
-        "Hive",
-        "Zookeeper",
-        "Linux",
-        "Mac OS",
-        "Motherboard",
-        "Apache",
-        "Cordova",
-        "SPA",
-        "PhoneGap",
-        "Universal Apps",
-        "Xamarin",
-        "Eclipse",
-        "PHP",
-        "T-SQL",
-        "Stored Procedure",
-        "Trigger",
-        "NTFS",
-        "Journaled",
-        "BootCamp",
-        "Office 365",
-        "POP",
-        "IMAP",
-        "SMTP",
-        "TCP/IP",
-        "IP Address",
-        "Domain Controller",
-        "DNS",
-        "DHCP",
-        "SATA",
-        "USB",
-        "HDMI",
-        "Firewire",
-        "Lightening",
-        "Edison",
-        "Galileo",
-        "Arduino",
-        "Rasberry Pi",
-        "TypeScript",
-        "CoffeeScript",
-        "jQuery",
-        "3D Printer",
-        "CAD",
-        "Photoshop",
-        "Illustrator",
-        "jpg",
-        "png",
-        "Partition",
-        "Unix",
-        "kernel",
-        "SOAP",
-        "Authentication",
-        "OAuth",
-        "OpenID",
-        "BitCoin",
-        "ASP",
-        "Mainframe",
-        "Storyboard",
-        "XCode",
-        "AirDrop",
-        "Bluetooth",
-        "BLE",
-        "ApplePay",
-        "App Store",
-        "Metal",
-        "Pattern",
-        "Distributed",
-        "GIT"
-    ],
-    "questions": [
+      ],
+      "ordered": false,
+      "tags": ["JavaScript", "front-end", "ES5"],
+      "categoryIds": [2]
+    },
+    {
+      "id": 2,
+      "questionText":
+        "Which of the following function of Array object calls a function for each element in the array?",
+      "answers": [
         {
-            "id": 1,
-            "questionText": "Which of the following function of Array object reverses the order of the elements of an array?",
-            "answers": [
-                {
-                    "id": 1,
-                    "answerText": "reverse()",
-                    "correct": true
-                },
-                {
-                    "id": 2,
-                    "answerText": "push()",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "answerText": "reduce()",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "answerText": "reduceRight()",
-                    "correct": false
-                }
-            ],
-            "ordered": false,
-            "tags": [
-                "JavaScript",
-                "front-end",
-                "ES5"
-            ],
-            "categoryIds": [
-                2
-            ]
+          "id": 1,
+          "answerText": "concat()",
+          "correct": false
         },
         {
-            "id": 2,
-            "questionText": "Which of the following function of Array object calls a function for each element in the array?",
-            "answers": [
-                {
-                    "id": 1,
-                    "answerText": "concat()",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "answerText": "every()",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "answerText": "filter()",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "answerText": "forEach()",
-                    "correct": true
-                }
-            ],
-            "ordered": false,
-            "tags": [
-                "JavaScript",
-                "front-end"
-            ],
-            "categoryIds": [
-                2
-            ]
+          "id": 2,
+          "answerText": "every()",
+          "correct": false
         },
         {
-            "id": 3,
-            "questionText": "Which of the following function of String object returns the index within the calling String object of the first occurrence of the specified value?",
-            "answers": [
-                {
-                    "id": 1,
-                    "answerText": "firstIndexOf()",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "answerText": "lastIndexOf()",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "answerText": "indexOf()",
-                    "correct": true
-                },
-                {
-                    "id": 4,
-                    "answerText": "search()",
-                    "correct": false
-                }
-            ],
-            "ordered": false,
-            "tags": [
-                "JavaScript"
-            ],
-            "categoryIds": [
-                2
-            ]
+          "id": 3,
+          "answerText": "filter()",
+          "correct": false
         },
         {
-            "id": 4,
-            "questionText": "Which of the following function of Boolean object returns a string containing the source of the Boolean object?",
-            "answers": [
-                {
-                    "id": 1,
-                    "answerText": "valueOf()",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "answerText": "toSource()",
-                    "correct": true
-                },
-                {
-                    "id": 3,
-                    "answerText": "indexOf()",
-                    "correct": false
-                },
-                {
-                    "id": 4,
-                    "answerText": "toString()",
-                    "correct": false
-                }
-            ],
-            "ordered": false,
-            "tags": [
-                "JavaScript"
-            ],
-            "categoryIds": [
-                2
-            ]
-        },
-        {
-            "id": 5,
-            "questionText": "Which of the following is true about cookie handling in JavaScript?",
-            "answers": [
-                {
-                    "id": 1,
-                    "answerText": "JavaScript can manipulate cookies using the cookie property of the Document object.",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "answerText": "JavaScript can read, create, modify, and delete the cookie or cookies that apply to the current web page.",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "answerText": "All of the above.",
-                    "correct": true
-                },
-                {
-                    "id": 4,
-                    "answerText": "None of the above.",
-                    "correct": false
-                }
-            ],
-            "ordered": true,
-            "tags": [
-                "JavaScript",
-                "ES5"
-            ],
-            "categoryIds": [
-                2
-            ]
-        },
-        {
-            "id": 6,
-            "questionText": "What's the best Trivia game?",
-            "answers": [
-                {
-                    "id": 1,
-                    "answerText": "Quiz Up",
-                    "correct": false
-                },
-                {
-                    "id": 2,
-                    "answerText": "Trivia Crack",
-                    "correct": false
-                },
-                {
-                    "id": 3,
-                    "answerText": "The one I'm playing",
-                    "correct": true
-                },
-                {
-                    "id": 4,
-                    "answerText": "It's subjective",
-                    "correct": false
-                }
-            ],
-            "ordered": false,
-            "tags": [
-                "gaming"
-            ],
-            "categoryIds": [
-                1
-            ]
+          "id": 4,
+          "answerText": "forEach()",
+          "correct": true
         }
-    ]
+      ],
+      "ordered": false,
+      "tags": ["JavaScript", "front-end"],
+      "categoryIds": [2]
+    },
+    {
+      "id": 3,
+      "questionText":
+        "Which of the following function of String object returns the index within the calling String object of the first occurrence of the specified value?",
+      "answers": [
+        {
+          "id": 1,
+          "answerText": "firstIndexOf()",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "answerText": "lastIndexOf()",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "answerText": "indexOf()",
+          "correct": true
+        },
+        {
+          "id": 4,
+          "answerText": "search()",
+          "correct": false
+        }
+      ],
+      "ordered": false,
+      "tags": ["JavaScript"],
+      "categoryIds": [2]
+    },
+    {
+      "id": 4,
+      "questionText":
+        "Which of the following function of Boolean object returns a string containing the source of the Boolean object?",
+      "answers": [
+        {
+          "id": 1,
+          "answerText": "valueOf()",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "answerText": "toSource()",
+          "correct": true
+        },
+        {
+          "id": 3,
+          "answerText": "indexOf()",
+          "correct": false
+        },
+        {
+          "id": 4,
+          "answerText": "toString()",
+          "correct": false
+        }
+      ],
+      "ordered": false,
+      "tags": ["JavaScript"],
+      "categoryIds": [2]
+    },
+    {
+      "id": 5,
+      "questionText":
+        "Which of the following is true about cookie handling in JavaScript?",
+      "answers": [
+        {
+          "id": 1,
+          "answerText":
+            "JavaScript can manipulate cookies using the cookie property of the Document object.",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "answerText":
+            "JavaScript can read, create, modify, and delete the cookie or cookies that apply to the current web page.",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "answerText": "All of the above.",
+          "correct": true
+        },
+        {
+          "id": 4,
+          "answerText": "None of the above.",
+          "correct": false
+        }
+      ],
+      "ordered": true,
+      "tags": ["JavaScript", "ES5"],
+      "categoryIds": [2]
+    },
+    {
+      "id": 6,
+      "questionText": "What's the best Trivia game?",
+      "answers": [
+        {
+          "id": 1,
+          "answerText": "Quiz Up",
+          "correct": false
+        },
+        {
+          "id": 2,
+          "answerText": "Trivia Crack",
+          "correct": false
+        },
+        {
+          "id": 3,
+          "answerText": "The one I'm playing",
+          "correct": true
+        },
+        {
+          "id": 4,
+          "answerText": "It's subjective",
+          "correct": false
+        }
+      ],
+      "ordered": false,
+      "tags": ["gaming"],
+      "categoryIds": [1]
+    }
+  ],
+  "departments": [
+    {
+      "id": 0,
+      "markup": 0.0,
+      "lookupCode": "00",
+      "name": "Department",
+      "date": "2012-11-04T21:46:01.347",
+      "departmentGroupId": 1,
+      "groupName": "None",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 0,
+          "name": "Sub Department",
+          "lookupCode": "0000",
+          "date": "2012-11-04T21:46:01.483"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "markup": 25.0,
+      "lookupCode": "01",
+      "name": "Beer",
+      "date": "2012-11-04T16:52:00.953",
+      "departmentGroupId": 2,
+      "groupName": "Beer",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 1,
+          "name": "Imported",
+          "lookupCode": "1001",
+          "date": "2012-11-04T16:52:42.853"
+        },
+        {
+          "id": 2,
+          "name": "Domestic",
+          "lookupCode": "1002",
+          "date": "2012-11-04T16:52:43.060"
+        },
+        {
+          "id": 3,
+          "name": "Non Alcoholic",
+          "lookupCode": "1003",
+          "date": "2012-11-04T16:52:43.257"
+        },
+        {
+          "id": 4,
+          "name": "Kegs",
+          "lookupCode": "1004",
+          "date": "2012-11-04T16:52:43.443"
+        },
+        {
+          "id": 5,
+          "name": "Beer Balls",
+          "lookupCode": "1005",
+          "date": "2012-11-04T16:52:43.640"
+        },
+        {
+          "id": 6,
+          "name": "Other Misc. Beer",
+          "lookupCode": "1006",
+          "date": "2012-11-04T16:52:43.837"
+        },
+        {
+          "id": 7,
+          "name": "Micro Brew",
+          "lookupCode": "1007",
+          "date": "2012-11-04T16:52:44.040"
+        },
+        {
+          "id": 8,
+          "name": "Gift Sets",
+          "lookupCode": "1008",
+          "date": "2012-11-04T16:52:44.230"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "markup": 50.0,
+      "lookupCode": "02",
+      "name": "Champagne",
+      "date": "2012-11-04T16:52:01.060",
+      "departmentGroupId": 4,
+      "groupName": "Wine",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 9,
+          "name": "Imported",
+          "lookupCode": "2001",
+          "date": "2012-11-04T16:52:44.427"
+        },
+        {
+          "id": 10,
+          "name": "Domestic",
+          "lookupCode": "2002",
+          "date": "2012-11-04T16:52:44.627"
+        },
+        {
+          "id": 11,
+          "name": "Gift Sets",
+          "lookupCode": "2003",
+          "date": "2012-11-04T16:52:44.823"
+        },
+        {
+          "id": 12,
+          "name": "Other",
+          "lookupCode": "2004",
+          "date": "2012-11-04T16:52:45.077"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "markup": 50.0,
+      "lookupCode": "03",
+      "name": "Wine Domestic",
+      "date": "2012-11-04T16:52:01.160",
+      "departmentGroupId": 4,
+      "groupName": "Wine",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 13,
+          "name": "Jug Wine",
+          "lookupCode": "3001",
+          "date": "2012-11-04T16:52:45.283"
+        },
+        {
+          "id": 14,
+          "name": "California",
+          "lookupCode": "3002",
+          "date": "2012-11-04T16:52:45.480"
+        },
+        {
+          "id": 15,
+          "name": "New York",
+          "lookupCode": "3003",
+          "date": "2012-11-04T16:52:45.677"
+        },
+        {
+          "id": 16,
+          "name": "Bag in Box",
+          "lookupCode": "3005",
+          "date": "2012-11-04T16:52:45.877"
+        },
+        {
+          "id": 17,
+          "name": "Ports & Sherry",
+          "lookupCode": "3006",
+          "date": "2012-11-04T16:52:46.070"
+        },
+        {
+          "id": 18,
+          "name": "Other Domestic Wine",
+          "lookupCode": "3007",
+          "date": "2012-11-04T16:52:46.270"
+        },
+        {
+          "id": 19,
+          "name": "Gift Sets",
+          "lookupCode": "3008",
+          "date": "2012-11-04T16:52:46.467"
+        },
+        {
+          "id": 20,
+          "name": "Oregon",
+          "lookupCode": "3009",
+          "date": "2012-11-04T16:52:46.663"
+        },
+        {
+          "id": 21,
+          "name": "Washington",
+          "lookupCode": "3010",
+          "date": "2012-11-04T16:52:46.860"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "markup": 50.0,
+      "lookupCode": "04",
+      "name": "Wine Imported",
+      "date": "2012-11-04T16:52:01.260",
+      "departmentGroupId": 4,
+      "groupName": "Wine",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 22,
+          "name": "French",
+          "lookupCode": "4001",
+          "date": "2012-11-04T16:52:47.057"
+        },
+        {
+          "id": 23,
+          "name": "Italian",
+          "lookupCode": "4002",
+          "date": "2012-11-04T16:52:47.257"
+        },
+        {
+          "id": 24,
+          "name": "Spanish",
+          "lookupCode": "4003",
+          "date": "2012-11-04T16:52:47.450"
+        },
+        {
+          "id": 25,
+          "name": "Portuguese",
+          "lookupCode": "4004",
+          "date": "2012-11-04T16:52:47.647"
+        },
+        {
+          "id": 26,
+          "name": "Chilean",
+          "lookupCode": "4005",
+          "date": "2012-11-04T16:52:47.847"
+        },
+        {
+          "id": 27,
+          "name": "Argentinean",
+          "lookupCode": "4006",
+          "date": "2012-11-04T16:52:48.030"
+        },
+        {
+          "id": 28,
+          "name": "German",
+          "lookupCode": "4007",
+          "date": "2012-11-04T16:52:48.233"
+        },
+        {
+          "id": 29,
+          "name": "Greek",
+          "lookupCode": "4008",
+          "date": "2012-11-04T16:52:48.430"
+        },
+        {
+          "id": 30,
+          "name": "Chinese",
+          "lookupCode": "4009",
+          "date": "2012-11-04T16:52:48.623"
+        },
+        {
+          "id": 31,
+          "name": "Japanese",
+          "lookupCode": "4010",
+          "date": "2012-11-04T16:52:48.820"
+        },
+        {
+          "id": 32,
+          "name": "Australian",
+          "lookupCode": "4011",
+          "date": "2012-11-04T16:52:49.083"
+        },
+        {
+          "id": 33,
+          "name": "Yugoslavian",
+          "lookupCode": "4012",
+          "date": "2012-11-04T16:52:49.283"
+        },
+        {
+          "id": 34,
+          "name": "Ports & Sherry",
+          "lookupCode": "4013",
+          "date": "2012-11-04T16:52:49.480"
+        },
+        {
+          "id": 35,
+          "name": "Other Imports",
+          "lookupCode": "4014",
+          "date": "2012-11-04T16:52:49.747"
+        },
+        {
+          "id": 36,
+          "name": "Gift Sets",
+          "lookupCode": "4015",
+          "date": "2012-11-04T16:52:49.943"
+        },
+        {
+          "id": 37,
+          "name": "Hungary",
+          "lookupCode": "4016",
+          "date": "2012-11-04T16:52:50.140"
+        },
+        {
+          "id": 38,
+          "name": "Russian",
+          "lookupCode": "4017",
+          "date": "2012-11-04T16:52:50.337"
+        },
+        {
+          "id": 39,
+          "name": "New Zealand",
+          "lookupCode": "4018",
+          "date": "2012-11-04T16:52:50.533"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "markup": 35.0,
+      "lookupCode": "05",
+      "name": "Vermouth",
+      "date": "2012-11-04T16:52:01.367",
+      "departmentGroupId": 4,
+      "groupName": "Wine",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 40,
+          "name": "Imported",
+          "lookupCode": "5001",
+          "date": "2012-11-04T16:52:50.730"
+        },
+        {
+          "id": 41,
+          "name": "Domestic",
+          "lookupCode": "5002",
+          "date": "2012-11-04T16:52:50.927"
+        },
+        {
+          "id": 42,
+          "name": "Apertif",
+          "lookupCode": "5003",
+          "date": "2012-11-04T16:52:51.123"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "markup": 35.0,
+      "lookupCode": "06",
+      "name": "Whiskey",
+      "date": "2012-11-04T16:52:01.467",
+      "departmentGroupId": 3,
+      "groupName": "Liquor",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 43,
+          "name": "Domestic Blended",
+          "lookupCode": "6001",
+          "date": "2012-11-04T16:52:51.320"
+        },
+        {
+          "id": 44,
+          "name": "Bourbon",
+          "lookupCode": "6002",
+          "date": "2012-11-04T16:52:51.527"
+        },
+        {
+          "id": 45,
+          "name": "Canadian",
+          "lookupCode": "6003",
+          "date": "2012-11-04T16:52:51.723"
+        },
+        {
+          "id": 46,
+          "name": "Irish",
+          "lookupCode": "6004",
+          "date": "2012-11-04T16:52:51.920"
+        },
+        {
+          "id": 47,
+          "name": "Corn",
+          "lookupCode": "6005",
+          "date": "2012-11-04T16:52:52.117"
+        },
+        {
+          "id": 48,
+          "name": "Other Liquor",
+          "lookupCode": "6006",
+          "date": "2012-11-04T16:52:52.313"
+        },
+        {
+          "id": 49,
+          "name": "Gift Sets",
+          "lookupCode": "6007",
+          "date": "2012-11-04T16:52:52.520"
+        },
+        {
+          "id": 50,
+          "name": "Rye",
+          "lookupCode": "6008",
+          "date": "2012-11-04T16:52:52.717"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "markup": 35.0,
+      "lookupCode": "07",
+      "name": "Scotch",
+      "date": "2012-11-04T16:52:01.567",
+      "departmentGroupId": 3,
+      "groupName": "Liquor",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 51,
+          "name": "Scotch",
+          "lookupCode": "7001",
+          "date": "2012-11-04T16:52:52.923"
+        },
+        {
+          "id": 52,
+          "name": "Single Malt",
+          "lookupCode": "7002",
+          "date": "2012-11-04T16:52:53.110"
+        },
+        {
+          "id": 53,
+          "name": "Gift Sets",
+          "lookupCode": "7003",
+          "date": "2012-11-04T16:52:53.307"
+        },
+        {
+          "id": 54,
+          "name": "Other Scotch",
+          "lookupCode": "7004",
+          "date": "2012-11-04T16:52:53.523"
+        },
+        {
+          "id": 55,
+          "name": "Other Scotch",
+          "lookupCode": "7006",
+          "date": "2012-11-04T16:52:53.720"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "markup": 35.0,
+      "lookupCode": "08",
+      "name": "Brandy",
+      "date": "2012-11-04T16:52:01.660",
+      "departmentGroupId": 3,
+      "groupName": "Liquor",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 56,
+          "name": "Domestic",
+          "lookupCode": "8001",
+          "date": "2012-11-04T16:52:53.910"
+        },
+        {
+          "id": 57,
+          "name": "Cognac",
+          "lookupCode": "8002",
+          "date": "2012-11-04T16:52:54.113"
+        },
+        {
+          "id": 58,
+          "name": "French",
+          "lookupCode": "8003",
+          "date": "2012-11-04T16:52:54.303"
+        },
+        {
+          "id": 59,
+          "name": "Spanish",
+          "lookupCode": "8004",
+          "date": "2012-11-04T16:52:54.510"
+        },
+        {
+          "id": 60,
+          "name": "Other Brandy",
+          "lookupCode": "8005",
+          "date": "2012-11-04T16:52:54.707"
+        },
+        {
+          "id": 61,
+          "name": "Gift Sets",
+          "lookupCode": "8006",
+          "date": "2012-11-04T16:52:54.903"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "markup": 35.0,
+      "lookupCode": "09",
+      "name": "Gin",
+      "date": "2012-11-04T16:52:01.760",
+      "departmentGroupId": 3,
+      "groupName": "Liquor",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 62,
+          "name": "Domestic",
+          "lookupCode": "9001",
+          "date": "2012-11-04T16:52:55.100"
+        },
+        {
+          "id": 63,
+          "name": "Imported",
+          "lookupCode": "9002",
+          "date": "2012-11-04T16:52:55.297"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "markup": 35.0,
+      "lookupCode": "10",
+      "name": "Vodka",
+      "date": "2012-11-04T16:52:01.877",
+      "departmentGroupId": 3,
+      "groupName": "Liquor",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 64,
+          "name": "Domestic",
+          "lookupCode": "10001",
+          "date": "2012-11-04T16:52:55.493"
+        },
+        {
+          "id": 65,
+          "name": "Imported",
+          "lookupCode": "10002",
+          "date": "2012-11-04T16:52:55.693"
+        },
+        {
+          "id": 66,
+          "name": "Gift Sets",
+          "lookupCode": "10003",
+          "date": "2012-11-04T16:52:55.887"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "markup": 35.0,
+      "lookupCode": "11",
+      "name": "Rum",
+      "date": "2012-11-04T16:52:01.977",
+      "departmentGroupId": 3,
+      "groupName": "Liquor",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 67,
+          "name": "Light",
+          "lookupCode": "11001",
+          "date": "2012-11-04T16:52:56.083"
+        },
+        {
+          "id": 68,
+          "name": "Dark",
+          "lookupCode": "11002",
+          "date": "2012-11-04T16:52:56.280"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "markup": 35.0,
+      "lookupCode": "12",
+      "name": "Tequila",
+      "date": "2012-11-04T16:52:02.077",
+      "departmentGroupId": 3,
+      "groupName": "Liquor",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 69,
+          "name": "Light",
+          "lookupCode": "12001",
+          "date": "2012-11-04T16:52:56.477"
+        },
+        {
+          "id": 70,
+          "name": "Gold",
+          "lookupCode": "12002",
+          "date": "2012-11-04T16:52:56.677"
+        },
+        {
+          "id": 71,
+          "name": "Other",
+          "lookupCode": "12003",
+          "date": "2012-11-04T16:52:56.873"
+        },
+        {
+          "id": 72,
+          "name": "Gift Sets",
+          "lookupCode": "12004",
+          "date": "2012-11-04T16:52:57.070"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "markup": 35.0,
+      "lookupCode": "13",
+      "name": "Cordial",
+      "date": "2012-11-04T16:52:02.173",
+      "departmentGroupId": 3,
+      "groupName": "Liquor",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 73,
+          "name": "Fruit Brandies",
+          "lookupCode": "13001",
+          "date": "2012-11-04T16:52:57.267"
+        },
+        {
+          "id": 74,
+          "name": "Cordial",
+          "lookupCode": "13002",
+          "date": "2012-11-04T16:52:57.463"
+        },
+        {
+          "id": 75,
+          "name": "Gift Sets",
+          "lookupCode": "13003",
+          "date": "2012-11-04T16:52:57.660"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "markup": 35.0,
+      "lookupCode": "14",
+      "name": "Coolers",
+      "date": "2012-11-04T16:52:02.273",
+      "departmentGroupId": 2,
+      "groupName": "Beer",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 76,
+          "name": "4Pk",
+          "lookupCode": "14001",
+          "date": "2012-11-04T16:52:57.907"
+        },
+        {
+          "id": 77,
+          "name": "2Lt",
+          "lookupCode": "14002",
+          "date": "2012-11-04T16:52:58.103"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "markup": 25.0,
+      "lookupCode": "15",
+      "name": "Grocery",
+      "date": "2012-11-04T16:52:02.370",
+      "departmentGroupId": 7,
+      "groupName": "Miscellaneous",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 78,
+          "name": "Soda",
+          "lookupCode": "15001",
+          "date": "2012-11-04T16:52:58.300"
+        },
+        {
+          "id": 79,
+          "name": "Mixers",
+          "lookupCode": "15002",
+          "date": "2012-11-04T16:52:58.497"
+        },
+        {
+          "id": 80,
+          "name": "Juices",
+          "lookupCode": "15003",
+          "date": "2012-11-04T16:52:58.693"
+        },
+        {
+          "id": 81,
+          "name": "Water",
+          "lookupCode": "15004",
+          "date": "2012-11-04T16:52:58.890"
+        },
+        {
+          "id": 82,
+          "name": "Candy",
+          "lookupCode": "15005",
+          "date": "2012-11-04T16:52:59.087"
+        },
+        {
+          "id": 83,
+          "name": "Nuts",
+          "lookupCode": "15006",
+          "date": "2012-11-04T16:52:59.373"
+        },
+        {
+          "id": 84,
+          "name": "Snacks",
+          "lookupCode": "15007",
+          "date": "2012-11-04T16:52:59.657"
+        },
+        {
+          "id": 85,
+          "name": "Misc. Grocery",
+          "lookupCode": "15008",
+          "date": "2012-11-04T16:52:59.853"
+        },
+        {
+          "id": 86,
+          "name": "Ice",
+          "lookupCode": "15009",
+          "date": "2012-11-04T16:53:00.053"
+        },
+        {
+          "id": 87,
+          "name": "Party Platters",
+          "lookupCode": "15010",
+          "date": "2012-11-04T16:53:00.247"
+        },
+        {
+          "id": 88,
+          "name": "Other",
+          "lookupCode": "15011",
+          "date": "2012-11-04T16:53:00.443"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "markup": 35.0,
+      "lookupCode": "16",
+      "name": "Non Foods",
+      "date": "2012-11-04T16:52:02.470",
+      "departmentGroupId": 6,
+      "groupName": "Accessories",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 89,
+          "name": "Party Goods",
+          "lookupCode": "16001",
+          "date": "2012-11-04T16:53:00.640"
+        },
+        {
+          "id": 90,
+          "name": "Tubs & Coolers",
+          "lookupCode": "16002",
+          "date": "2012-11-04T16:53:00.840"
+        },
+        {
+          "id": 91,
+          "name": "Misc. Non-Foods",
+          "lookupCode": "16003",
+          "date": "2012-11-04T16:53:01.037"
+        },
+        {
+          "id": 92,
+          "name": "Book Periodicals",
+          "lookupCode": "16004",
+          "date": "2012-11-04T16:53:01.233"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "markup": 15.0,
+      "lookupCode": "17",
+      "name": "Tobacco",
+      "date": "2012-11-04T16:52:02.567",
+      "departmentGroupId": 5,
+      "groupName": "Tobacco",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 93,
+          "name": "Cigarettes",
+          "lookupCode": "17001",
+          "date": "2012-11-04T16:53:01.430"
+        },
+        {
+          "id": 94,
+          "name": "100'S Regular",
+          "lookupCode": "17002",
+          "date": "2012-11-04T16:53:01.627"
+        },
+        {
+          "id": 95,
+          "name": "Cigars",
+          "lookupCode": "17003",
+          "date": "2012-11-04T16:53:01.823"
+        },
+        {
+          "id": 96,
+          "name": "Other",
+          "lookupCode": "17004",
+          "date": "2012-11-04T16:53:02.020"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "markup": 25.0,
+      "lookupCode": "18",
+      "name": "Miscellaneous",
+      "date": "2012-11-04T16:52:02.667",
+      "departmentGroupId": 7,
+      "groupName": "Miscellaneous",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 97,
+          "name": "Taxable",
+          "lookupCode": "18001",
+          "date": "2012-11-04T16:53:02.217"
+        },
+        {
+          "id": 98,
+          "name": "Non-Taxable",
+          "lookupCode": "18002",
+          "date": "2012-11-04T16:53:02.427"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "markup": 50.0,
+      "lookupCode": "19",
+      "name": "Gift Items",
+      "date": "2012-11-04T16:52:02.763",
+      "departmentGroupId": 4,
+      "groupName": "Wine",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 99,
+          "name": "Misc. Gift Items",
+          "lookupCode": "19001",
+          "date": "2012-11-04T16:53:02.630"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "markup": 35.0,
+      "lookupCode": "20",
+      "name": "Premixed Cocktails",
+      "date": "2012-11-04T16:52:02.950",
+      "departmentGroupId": 3,
+      "groupName": "Liquor",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 100,
+          "name": "Mixture",
+          "lookupCode": "20001",
+          "date": "2012-11-04T16:53:02.827"
+        },
+        {
+          "id": 101,
+          "name": "Other",
+          "lookupCode": "20002",
+          "date": "2012-11-04T16:53:03.023"
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "markup": 50.0,
+      "lookupCode": "21",
+      "name": "Wine Cellar Domestic",
+      "date": "2012-11-04T16:52:03.047",
+      "departmentGroupId": 4,
+      "groupName": "Wine",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 102,
+          "name": "California Cabernet Sauvignon",
+          "lookupCode": "21001",
+          "date": "2012-11-04T16:53:03.220"
+        },
+        {
+          "id": 103,
+          "name": "California Chardonnay",
+          "lookupCode": "21002",
+          "date": "2012-11-04T16:53:03.420"
+        },
+        {
+          "id": 104,
+          "name": "California Merlot",
+          "lookupCode": "21003",
+          "date": "2012-11-04T16:53:03.617"
+        },
+        {
+          "id": 105,
+          "name": "California Red Meritage",
+          "lookupCode": "21004",
+          "date": "2012-11-04T16:53:03.823"
+        },
+        {
+          "id": 106,
+          "name": "California Other Red",
+          "lookupCode": "21005",
+          "date": "2012-11-04T16:53:04.020"
+        },
+        {
+          "id": 107,
+          "name": "California Other White",
+          "lookupCode": "21006",
+          "date": "2012-11-04T16:53:04.217"
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "markup": 50.0,
+      "lookupCode": "22",
+      "name": "Wine Cellar Imported",
+      "date": "2012-11-04T16:52:03.167",
+      "departmentGroupId": 4,
+      "groupName": "Wine",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 108,
+          "name": "French Bordeaux Red",
+          "lookupCode": "22001",
+          "date": "2012-11-04T16:53:04.427"
+        },
+        {
+          "id": 109,
+          "name": "French Burgundy Red",
+          "lookupCode": "22002",
+          "date": "2012-11-04T16:53:04.630"
+        },
+        {
+          "id": 110,
+          "name": "French Rhone Red",
+          "lookupCode": "22003",
+          "date": "2012-11-04T16:53:04.837"
+        },
+        {
+          "id": 111,
+          "name": "French Burgundy White",
+          "lookupCode": "22004",
+          "date": "2012-11-04T16:53:05.033"
+        },
+        {
+          "id": 112,
+          "name": "French Other Red",
+          "lookupCode": "22005",
+          "date": "2012-11-04T16:53:05.240"
+        },
+        {
+          "id": 113,
+          "name": "French Other White",
+          "lookupCode": "22006",
+          "date": "2012-11-04T16:53:05.437"
+        },
+        {
+          "id": 114,
+          "name": "Portuguese",
+          "lookupCode": "22007",
+          "date": "2012-11-04T16:53:05.633"
+        },
+        {
+          "id": 115,
+          "name": "Spanish",
+          "lookupCode": "22008",
+          "date": "2012-11-04T16:53:05.830"
+        },
+        {
+          "id": 116,
+          "name": "Chilean",
+          "lookupCode": "22009",
+          "date": "2012-11-04T16:53:06.027"
+        },
+        {
+          "id": 117,
+          "name": "Australian",
+          "lookupCode": "22010",
+          "date": "2012-11-04T16:53:06.227"
+        },
+        {
+          "id": 118,
+          "name": "Other Imports",
+          "lookupCode": "22011",
+          "date": "2012-11-04T16:53:06.413"
+        },
+        {
+          "id": 119,
+          "name": "Italian Amarone",
+          "lookupCode": "22012",
+          "date": "2012-11-04T16:53:06.597"
+        },
+        {
+          "id": 120,
+          "name": "Italian Barolo",
+          "lookupCode": "22013",
+          "date": "2012-11-04T16:53:06.787"
+        },
+        {
+          "id": 121,
+          "name": "Italian Brunello",
+          "lookupCode": "22014",
+          "date": "2012-11-04T16:53:06.983"
+        },
+        {
+          "id": 122,
+          "name": "Italian Barbaresco",
+          "lookupCode": "22015",
+          "date": "2012-11-04T16:53:07.180"
+        },
+        {
+          "id": 123,
+          "name": "Italian Other Red",
+          "lookupCode": "22016",
+          "date": "2012-11-04T16:53:07.377"
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "markup": 50.0,
+      "lookupCode": "23",
+      "name": "Discontinued Item",
+      "date": "2012-11-04T16:52:03.267",
+      "departmentGroupId": 4,
+      "groupName": "Wine",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 124,
+          "name": "Wine Imported",
+          "lookupCode": "23001",
+          "date": "2012-11-04T16:53:07.573"
+        },
+        {
+          "id": 125,
+          "name": "Wine Domestic",
+          "lookupCode": "23002",
+          "date": "2012-11-04T16:53:07.770"
+        },
+        {
+          "id": 126,
+          "name": "Liquor",
+          "lookupCode": "23003",
+          "date": "2012-11-04T16:53:08.017"
+        },
+        {
+          "id": 127,
+          "name": "Champagne",
+          "lookupCode": "23004",
+          "date": "2012-11-04T16:53:08.217"
+        },
+        {
+          "id": 128,
+          "name": "Beer",
+          "lookupCode": "23005",
+          "date": "2012-11-04T16:53:08.427"
+        },
+        {
+          "id": 129,
+          "name": "Miscellaneous",
+          "lookupCode": "23006",
+          "date": "2012-11-04T16:53:08.627"
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "markup": 50.0,
+      "lookupCode": "24",
+      "name": "Wine Dessert",
+      "date": "2012-11-04T16:52:03.367",
+      "departmentGroupId": 4,
+      "groupName": "Wine",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 130,
+          "name": "Imported",
+          "lookupCode": "24001",
+          "date": "2012-11-04T16:53:08.823"
+        },
+        {
+          "id": 131,
+          "name": "Domestic",
+          "lookupCode": "24002",
+          "date": "2012-11-04T16:53:09.010"
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "markup": 50.0,
+      "lookupCode": "25",
+      "name": "Wine Kosher",
+      "date": "2012-11-04T16:52:03.463",
+      "departmentGroupId": 4,
+      "groupName": "Wine",
+      "salesTaxGroupId": 0,
+      "salesTax": 0.07,
+      "subDepartments": [
+        {
+          "id": 132,
+          "name": "Imported",
+          "lookupCode": "25001",
+          "date": "2012-11-04T16:53:09.207"
+        },
+        {
+          "id": 133,
+          "name": "Domestic",
+          "lookupCode": "25002",
+          "date": "2012-11-04T16:53:09.453"
+        }
+      ]
+    }
+  ]
 }

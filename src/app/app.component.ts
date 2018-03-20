@@ -4,7 +4,7 @@ import { MatDialog, MatDialogRef } from '@angular/material';
 import { AboutComponent } from './components/index';
 
 @Component({
-  selector: 'app-root',
+  selector: 'sample-app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

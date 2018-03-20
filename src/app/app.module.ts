@@ -12,8 +12,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialModule } from './modules/material.module';
 
-import { AgGridModule } from 'ag-grid-angular/main';
-
 import './rxjs-extensions';
 
 import {
@@ -47,8 +45,7 @@ import {
     HttpModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MaterialModule,
-    AgGridModule.withComponents([ProductComponent])
+    MaterialModule
   ],
   providers: [CategoryService, TagService, QuestionService, ProductService],
   bootstrap: [AppComponent]

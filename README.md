@@ -84,7 +84,6 @@ Installing npm package dependencies
  npm install --save material-design-iconic-font
  npm install --save hammerjs
  npm install --save vis
- npm install --save ag-grid-angular ag-grid
  npm install --save-dev json-server
 
 Creating new components
@@ -95,10 +94,13 @@ Creating new components
  ng generate component components/product --module app
 
 Creating new services
- ng generate service services/cateory --module app --spec false
+ ng generate service services/category --module app --spec false
  ng generate service services/question --module app --spec false
  ng generate service services/tag --module app --spec false
  ng generate service services/product --module app --spec false
+
+ ng generate class model/category --spec false
+ ng generate class model/department --spec false
 ```
 
 ### Add Apollo/GraphQL to the Application
@@ -139,13 +141,6 @@ Windows:
 Mac:
 ```
 
-### AG-Grid
-
-```
-ag-grid Using matrial degin theme
- https://www.ag-grid.com/javascript-grid-themes/material-theme.php
-```
-
 ### Credit / Prior Art
 
 * https://www.sitepoint.com/beginners-guide-node-package-manager/
@@ -156,3 +151,4 @@ ag-grid Using matrial degin theme
 * https://alligator.io/angular/angular-material-2/
 * https://coursetro.com/posts/code/29/Working-with-Angular-2-Material
 * https://loiane.com/2017/09/continuous-integration-with-angular-cli-travis-ci-firebase-greenkeeper-github/
+* https://blog.angular-university.io/angular-material-data-table/

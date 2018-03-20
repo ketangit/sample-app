@@ -5,13 +5,6 @@
 @import '~typeface-roboto/index.css';
 @import '~material-design-iconic-font/dist/css/material-design-iconic-font.min.css';
 
-$ag-mat-primary: #2196f3; // blue-500
-$ag-mat-accent: #ffd740; // amber-A200
-// Import the ag-Grid material theme
-@import '~ag-grid/dist/styles/ag-theme-material';
-@import '~ag-grid/dist/styles/ag-grid.css';
-// @import '~ag-grid/dist/styles/ag-theme-balham.css';
-
 html,
 body {
   margin: 0;

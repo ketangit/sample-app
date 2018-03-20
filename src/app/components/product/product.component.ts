@@ -1,6 +1,9 @@
 import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
-import { GridOptions } from 'ag-grid';
+import { Observable } from 'rxjs/Observable';
+
 import { ProductService } from '../../services';
+import { DataSource } from '@angular/cdk/collections';
+import { Department } from '../../model';
 
 @Component({
   selector: 'sample-product',
@@ -9,36 +12,28 @@ import { ProductService } from '../../services';
   encapsulation: ViewEncapsulation.None
 })
 export class ProductComponent implements OnInit, OnDestroy {
-  gridApi: any[];
-  gridColumnApi: any[];
-  columnDefs: any[];
+  dataSource = new DepartmentDataSource(this.productService);
+  displayedColumns = ['name', 'groupName', 'markup', 'salesTax', 'date'];
 
-  constructor(private productService: ProductService) {
-    this.columnDefs = [
-      { headerName: 'Athlete', field: 'athlete', width: 150 },
-      { headerName: 'Age', field: 'age', width: 90 },
-      { headerName: 'Country', field: 'country', width: 120 },
-      { headerName: 'Year', field: 'year', width: 90 },
-      { headerName: 'Date', field: 'date', width: 110 },
-      { headerName: 'Sport', field: 'sport', width: 110 },
-      { headerName: 'Gold', field: 'gold', width: 100 },
-      { headerName: 'Silver', field: 'silver', width: 100 },
-      { headerName: 'Bronze', field: 'bronze', width: 100 },
-      { headerName: 'Total', field: 'total', width: 100 }
-    ];
-  }
+  constructor(private productService: ProductService) {}
 
   ngOnInit() {}
 
   ngOnDestroy() {}
 
-  onGridReady(params) {
-    this.gridApi = params.api;
-    this.gridColumnApi = params.columnApi;
+  addNew() {}
 
-    this.productService.getProducts().subscribe(data => {
-      params.api.setRowData(data);
-    });
-    params.api.sizeColumnsToFit();
+  deleteItem(i: number) {}
+
+  editItem(i: number) {}
+}
+
+export class DepartmentDataSource extends DataSource<Department> {
+  constructor(private productService: ProductService) {
+    super();
   }
+  connect(): Observable<Department[]> {
+    return this.productService.getDepartments();
+  }
+  disconnect() {}
 }

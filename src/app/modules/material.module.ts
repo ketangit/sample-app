@@ -12,7 +12,11 @@ import {
   MatCheckboxModule,
   MatChipsModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatSortModule,
+  MatProgressSpinnerModule
 } from '@angular/material';
 
 import { MatDialogModule } from '@angular/material/dialog';
@@ -32,6 +36,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatChipsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
 
     MatDialogModule
   ]
