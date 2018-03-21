@@ -152,3 +152,4 @@ Mac:
 * https://coursetro.com/posts/code/29/Working-with-Angular-2-Material
 * https://loiane.com/2017/09/continuous-integration-with-angular-cli-travis-ci-firebase-greenkeeper-github/
 * https://blog.angular-university.io/angular-material-data-table/
+* https://stackblitz.com/edit/angular-material2-table?file=app%2Fapp.component.html

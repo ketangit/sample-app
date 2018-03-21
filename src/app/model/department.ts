@@ -1,4 +1,4 @@
-export class Department {
+export interface Department {
   id: number;
   markup: number;
   lookupCode: string;
@@ -11,7 +11,7 @@ export class Department {
   subDepartments: SubDepartment[];
 }
 
-export class SubDepartment {
+export interface SubDepartment {
   id: number;
   name: string;
   lookupCode: string;
