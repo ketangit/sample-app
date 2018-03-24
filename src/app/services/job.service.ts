@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http, Response } from '@angular/http';
-import { Job } from '../model/job';
-import { Engine } from '../model/engine';
-import { Task } from '../model/task';
-import 'rxjs/add/operator/toPromise';
+import { Job , Engine, Task} from '../model';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class JobdetailService {
+export class JobService {
 
   private headers = new Headers({ 'Content-Type': 'application/json' });
 
@@ -17,17 +15,19 @@ export class JobdetailService {
   }
 
   getJobDetails(engine: Engine): Observable<Job[]> {
-    let jobdeailUrl = '/api/v1/engines/' + engine.id + '/jobs';
+    const jobdeailUrl = '/api/v1/engines/' + engine.id + '/jobs';
+    return Observable.of([]);
+    /*
     return this.http.get(jobdeailUrl)
       .map(response => <Job[]>response.json())
       .flatMap((jobs: Job[]) => {
         if (jobs.length > 0) {
           return Observable.forkJoin(
             jobs.map(job => {
-              let taskapiUrl = '/api/v1/engines/' + engine.id + '/jobs/' + job.id + '/tasks';
+              const taskapiUrl = '/api/v1/engines/' + engine.id + '/jobs/' + job.id + '/tasks';
               return this.http.get(taskapiUrl)
                 .map(response => {
-                  let tasks: Task[] = <Task[]>response.json()._embedded.tasks;
+                  const tasks: Task[] = <Task[]>response.json()._embedded.tasks;
                   job.tasks = tasks;
                   return job;
                 });
@@ -36,6 +36,7 @@ export class JobdetailService {
         }
         return Observable.of([]);
       });
+      */
   }
 
   private handleError(error: any): Promise<any> {

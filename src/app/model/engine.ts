@@ -1,21 +1,20 @@
 export class Engine {
 
-  public ENGINE_INSTANCE_REL = 'engine:instance';
+  public static ENGINE_INSTANCE_REL = 'engine:instance';
   public statusLink: string;
   public engineInstance: EngineInstance[] = [];
 
-  constructor(public id: string,
-              public name: string,
-              public sealId: string,
-              public createdDate: Date,
-              public active: boolean,
-              public statistics: Statistics[],
-              public links: Link[]) {
-  }
+   id: string;
+   name: string;
+   appId: string;
+   createdDate: Date;
+   active: boolean;
+   statistics: Statistics[];
+   links: Link[];
 
   public getRunningJobCount() {
-    let jobCount: number = 0;
-    let value: Statistics[] = this.statistics
+    let jobCount = 0;
+    const value: Statistics[] = this.statistics
       .filter(status => status.statusCode === Statuscode[Statuscode.RUNNING]);
     if (value.length > 0) {
       jobCount = value[0].jobCount;
@@ -24,8 +23,8 @@ export class Engine {
   }
 
   public getFailedJobCount() {
-    let jobCount: number = 0;
-    let value: Statistics[] = this.statistics
+    let jobCount = 0;
+    const value: Statistics[] = this.statistics
       .filter(status => status.statusCode === Statuscode[Statuscode.FAILED]);
     if (value.length > 0) {
       jobCount = value[0].jobCount;
@@ -34,8 +33,9 @@ export class Engine {
   }
 
   public getCompletedJobCount() {
-    let jobCount: number = 0;
-    let value: Statistics[] = this.statistics
+    let jobCount: number;
+    jobCount = 0;
+    const value: Statistics[] = this.statistics
       .filter(status => status.statusCode === Statuscode[Statuscode.COMPLETED]);
     if (value.length > 0) {
       jobCount = value[0].jobCount;
@@ -90,14 +90,14 @@ export class EngineInstance {
   }
 }
 
-export class Statistics {
-  constructor(public jobCount: number, public statusCode: String) {
-  }
+export interface Statistics {
+  jobCount: number;
+  statusCode: String;
 }
 
-export class Link {
-  constructor(public rel: string, public href: string) {
-  }
+export interface Link {
+  rel: string;
+  href: string;
 }
 
 export enum Statuscode {

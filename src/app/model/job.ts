@@ -31,7 +31,7 @@ export class TaskDetail {
 }
 
 export class Task {
-  public DONE_TASK: 'DoneTask';
+  public static DONE_TASK: 'DoneTask';
 
   constructor(public id: number,
               public name: string,

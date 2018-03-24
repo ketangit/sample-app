@@ -1,17 +1,19 @@
 import { Injectable } from '@angular/core';
-import { Headers, Http, Response } from '@angular/http';
-import { Engine } from '../model/engine';
-import { Statistics } from '../model/statistics';
-import { EngineInstance } from '../model/engine-instance';
-import { Link } from '../model/link';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/toPromise';
+import { Engine, Statistics, Link, EngineInstance } from '../model';
+import { environment } from '../../environments/environment';
 
 @Injectable()
-export class EnginebedgeService {
+export class EngineService {
+  constructor(private http: HttpClient) {}
 
+  getEngines(): Observable<Engine[]> {
+    return this.http.get<Engine[]>(environment.api + '/engines');
+  }
+/*
   private headers = new Headers({ 'Content-Type': 'application/json' });
-  private enginesUrl = '/api/v1/engines/';
+  private enginesUrl = '/engines/';
   results: Engine[];
 
   constructor(private http: Http) {
@@ -20,14 +22,16 @@ export class EnginebedgeService {
 
   getEngineInstance(url: string): Observable<EngineInstance> {
     return this.http.get(url)
-      .map(response => <EngineInstance>response.json())
+      .map(response => <EngineInstance>response.json());
   }
 
   getEngines(): Observable<Engine[]> {
     return this.http.get(this.enginesUrl)
       .map(response => {
         return response.json().map(engine => {
-          return new Engine(engine.id, engine.name, engine.sealId, engine.createDate, engine.active, this.getStatistics(engine), this.getEngineLinks(engine));
+          return new Engine(engine.id, engine.name, engine.sealId,
+            engine.createDate, engine.active, this.getStatistics(engine),
+            this.getEngineLinks(engine));
         });
       });
   }
@@ -48,5 +52,5 @@ export class EnginebedgeService {
     console.error('An error occurred', error);
     return Promise.reject(error.message || error);
   }
-
+*/
 }

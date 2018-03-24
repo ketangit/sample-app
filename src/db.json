@@ -175,8 +175,7 @@
   "questions": [
     {
       "id": 1,
-      "questionText":
-        "Which of the following function of Array object reverses the order of the elements of an array?",
+      "questionText": "Which of the following function of Array object reverses the order of the elements of an array?",
       "answers": [
         {
           "id": 1,
@@ -200,13 +199,18 @@
         }
       ],
       "ordered": false,
-      "tags": ["JavaScript", "front-end", "ES5"],
-      "categoryIds": [2]
+      "tags": [
+        "JavaScript",
+        "front-end",
+        "ES5"
+      ],
+      "categoryIds": [
+        2
+      ]
     },
     {
       "id": 2,
-      "questionText":
-        "Which of the following function of Array object calls a function for each element in the array?",
+      "questionText": "Which of the following function of Array object calls a function for each element in the array?",
       "answers": [
         {
           "id": 1,
@@ -230,13 +234,17 @@
         }
       ],
       "ordered": false,
-      "tags": ["JavaScript", "front-end"],
-      "categoryIds": [2]
+      "tags": [
+        "JavaScript",
+        "front-end"
+      ],
+      "categoryIds": [
+        2
+      ]
     },
     {
       "id": 3,
-      "questionText":
-        "Which of the following function of String object returns the index within the calling String object of the first occurrence of the specified value?",
+      "questionText": "Which of the following function of String object returns the index within the calling String object of the first occurrence of the specified value?",
       "answers": [
         {
           "id": 1,
@@ -260,13 +268,16 @@
         }
       ],
       "ordered": false,
-      "tags": ["JavaScript"],
-      "categoryIds": [2]
+      "tags": [
+        "JavaScript"
+      ],
+      "categoryIds": [
+        2
+      ]
     },
     {
       "id": 4,
-      "questionText":
-        "Which of the following function of Boolean object returns a string containing the source of the Boolean object?",
+      "questionText": "Which of the following function of Boolean object returns a string containing the source of the Boolean object?",
       "answers": [
         {
           "id": 1,
@@ -290,24 +301,25 @@
         }
       ],
       "ordered": false,
-      "tags": ["JavaScript"],
-      "categoryIds": [2]
+      "tags": [
+        "JavaScript"
+      ],
+      "categoryIds": [
+        2
+      ]
     },
     {
       "id": 5,
-      "questionText":
-        "Which of the following is true about cookie handling in JavaScript?",
+      "questionText": "Which of the following is true about cookie handling in JavaScript?",
       "answers": [
         {
           "id": 1,
-          "answerText":
-            "JavaScript can manipulate cookies using the cookie property of the Document object.",
+          "answerText": "JavaScript can manipulate cookies using the cookie property of the Document object.",
           "correct": false
         },
         {
           "id": 2,
-          "answerText":
-            "JavaScript can read, create, modify, and delete the cookie or cookies that apply to the current web page.",
+          "answerText": "JavaScript can read, create, modify, and delete the cookie or cookies that apply to the current web page.",
           "correct": false
         },
         {
@@ -322,8 +334,13 @@
         }
       ],
       "ordered": true,
-      "tags": ["JavaScript", "ES5"],
-      "categoryIds": [2]
+      "tags": [
+        "JavaScript",
+        "ES5"
+      ],
+      "categoryIds": [
+        2
+      ]
     },
     {
       "id": 6,
@@ -351,8 +368,12 @@
         }
       ],
       "ordered": false,
-      "tags": ["gaming"],
-      "categoryIds": [1]
+      "tags": [
+        "gaming"
+      ],
+      "categoryIds": [
+        1
+      ]
     }
   ],
   "departments": [
@@ -1495,6 +1516,167 @@
           "name": "Domestic",
           "lookupCode": "25002",
           "date": "2012-11-04T16:53:09.453"
+        }
+      ]
+    }
+  ],
+  "engines": [
+    {
+      "id": 44,
+      "name": "test-engine",
+      "appId": "12345",
+      "createDate": "2018-03-19 06:56:11",
+      "statistics": [
+        {
+          "jobCount": 9,
+          "statusCode": "COMPLETED"
+        }
+      ],
+      "active": false,
+      "orgName": "ORG1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:8080/api/v1/engines/44"
+        },
+        {
+          "rel": "engine:usage",
+          "href": "http://localhost:8080/api/v1/engines/44/usage"
+        },
+        {
+          "rel": "engine:jobs",
+          "href": "http://localhost:8080/api/v1/engines/44/jobs"
+        },
+        {
+          "rel": "engine:statistic",
+          "href": "http://localhost:8080/api/v1/engines/44/statistic/COMPLETED"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "foo-engine",
+      "appId": "456789",
+      "createDate": "2018-03-20 13:28:43",
+      "statistics": [],
+      "active": false,
+      "orgName": "ORG1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:8080/api/v1/engines/45"
+        },
+        {
+          "rel": "engine:usage",
+          "href": "http://localhost:8080/api/v1/engines/45/usage"
+        },
+        {
+          "rel": "engine:jobs",
+          "href": "http://localhost:8080/api/v1/engines/45/jobs"
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "name": "awesome-engine",
+      "appId": "324523",
+      "createDate": "2018-03-22 23:29:04",
+      "statistics": [
+        {
+          "jobCount": 5,
+          "statusCode": "COMPLETED"
+        },
+        {
+          "jobCount": 2,
+          "statusCode": "READY"
+        },
+        {
+          "jobCount": 1,
+          "statusCode": "RUNNING"
+        },
+        {
+          "jobCount": 3,
+          "statusCode": "FAILED"
+        }
+      ],
+      "active": false,
+      "orgName": "ORG1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:8080/api/v1/engines/63"
+        },
+        {
+          "rel": "engine:usage",
+          "href": "http://localhost:8080/api/v1/engines/63/usage"
+        },
+        {
+          "rel": "engine:jobs",
+          "href": "http://localhost:8080/api/v1/engines/63/jobs"
+        },
+        {
+          "rel": "engine:statistic",
+          "href": "http://localhost:8080/api/v1/engines/63/statistic/COMPLETED"
+        },
+        {
+          "rel": "engine:statistic",
+          "href": "http://localhost:8080/api/v1/engines/63/statistic/READY"
+        },
+        {
+          "rel": "engine:statistic",
+          "href": "http://localhost:8080/api/v1/engines/63/statistic/RUNNING"
+        },
+        {
+          "rel": "engine:statistic",
+          "href": "http://localhost:8080/api/v1/engines/63/statistic/FAILED"
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "name": "sample-engine",
+      "appId": "234512",
+      "createDate": "2018-03-23 14:18:27",
+      "statistics": [
+        {
+          "jobCount": 1,
+          "statusCode": "SCHEDULED"
+        },
+        {
+          "jobCount": 1,
+          "statusCode": "RUNNING"
+        },
+        {
+          "jobCount": 4,
+          "statusCode": "FAILED"
+        }
+      ],
+      "active": false,
+      "orgName": "ORG1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:8080/api/v1/engines/81"
+        },
+        {
+          "rel": "engine:usage",
+          "href": "http://localhost:8080/api/v1/engines/81/usage"
+        },
+        {
+          "rel": "engine:jobs",
+          "href": "http://localhost:8080/api/v1/engines/81/jobs"
+        },
+        {
+          "rel": "engine:statistic",
+          "href": "http://localhost:8080/api/v1/engines/81/statistic/SCHEDULED"
+        },
+        {
+          "rel": "engine:statistic",
+          "href": "http://localhost:8080/api/v1/engines/81/statistic/RUNNING"
+        },
+        {
+          "rel": "engine:statistic",
+          "href": "http://localhost:8080/api/v1/engines/81/statistic/FAILED"
         }
       ]
     }

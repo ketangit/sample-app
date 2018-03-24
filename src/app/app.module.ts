@@ -25,7 +25,9 @@ import {
   CategoryService,
   TagService,
   QuestionService,
-  ProductService
+  ProductService,
+  EngineService,
+  JobService
 } from './services';
 
 @NgModule({
@@ -47,7 +49,7 @@ import {
     FlexLayoutModule,
     MaterialModule
   ],
-  providers: [CategoryService, TagService, QuestionService, ProductService],
+  providers: [CategoryService, TagService, QuestionService, ProductService, EngineService, JobService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
