@@ -15,7 +15,8 @@ export class NetworkGraphComponent implements OnInit, OnDestroy {
   constructor() {}
 
   ngOnInit() {
-    const nodes = new DataSet([
+
+    this.nodes = new DataSet([
       { id: 1, label: 'Engine', group: 'engine' },
       { id: 2, label: 'Job 1', group: 'job' },
       { id: 3, label: 'Job 2', group: 'job' },
@@ -40,8 +41,9 @@ export class NetworkGraphComponent implements OnInit, OnDestroy {
       { id: 22, label: 'Task 10', group: 'task' },
       { id: 23, label: 'Done', group: 'done' }
     ]);
+
     // create an array with edges
-    const edges = new DataSet([
+    this.edges = new DataSet([
       { from: 1, to: 2 },
       { from: 1, to: 3 },
       { from: 1, to: 4 },
@@ -65,11 +67,7 @@ export class NetworkGraphComponent implements OnInit, OnDestroy {
       { from: 15, to: 22 },
       { from: 15, to: 23 }
     ]);
-    // create a network
-    const data = {
-      nodes: nodes,
-      edges: edges
-    };
+
     // get Unicode from http://zavoloklom.github.io/material-design-iconic-font/icons.html
     const optionGroups = {
       engine: {
@@ -109,29 +107,40 @@ export class NetworkGraphComponent implements OnInit, OnDestroy {
         }
       } // orange
     };
+
     const options = {
+      autoResize: true,
       clickToUse: false,
       edges: {
-        smooth: {
-          forceDirection: 'none',
-          roundness: 0
-        },
         arrows: 'to',
-        color: '#1ABC9C',
+        color: '#1abc9c',
         shadow: true
       },
-      physics: {
-        enabled: false
+      interaction: {
+        hover: true
       },
+      groups: optionGroups,
       layout: {
+        improvedLayout: true,
         hierarchical: {
-          enabled: true
+          enabled: false,
+          nodeSpacing: 300,
+          treeSpacing: 400,
+          blockShifting: true,
+          parentCentralization: true,
+          direction: 'UD',
+          sortMethod: 'directed'
         }
-      },
-      groups: optionGroups
+      }
+    };
+
+    // create a network
+    const data = {
+      nodes: this.nodes,
+      edges: this.edges
     };
     const container = document.getElementById('network');
-    const network = new Network(container, data, options);
+    this.network = new Network(container, data, options);
   }
 
   ngOnDestroy() {}
