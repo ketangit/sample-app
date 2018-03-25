@@ -49,5 +49,14 @@
     </button>
   </mat-menu>
 
-  <router-outlet></router-outlet>
+  <!-- sample app layout -->
+  <div fxLayout="row" fxFill>
+    <div fxFlex="307px">
+      <sample-enginelist></sample-enginelist>
+    </div>
+    <div fxFlex>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
 </mat-sidenav-container>

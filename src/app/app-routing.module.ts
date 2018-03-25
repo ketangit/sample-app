@@ -9,26 +9,13 @@ import {
 } from './components/index';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent
-  },
-  {
-    path: 'about',
-    component: AboutComponent
-  },
-  {
-    path: 'network',
-    component: NetworkGraphComponent
-  },
-  {
-    path: 'tags',
-    component: TagsComponent
-  },
-  {
-    path: 'product',
-    component: ProductComponent
-  }
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'network', component: NetworkGraphComponent },
+  { path: 'tags', component: TagsComponent },
+  { path: 'product', component: ProductComponent },
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({
