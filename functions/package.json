@@ -1,0 +1,17 @@
+{
+  "name": "functions",
+  "description": "TypeScript Cloud Functions for Firebase",
+  "dependencies": {
+    "express": "^4.16.2",
+    "firebase-admin": "^5.8.2",
+    "firebase-functions": "^0.8.1",
+    "fs-extra": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.11.1",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1"
+  },
+  "main": "lib/index.js",
+  "private": true
+}

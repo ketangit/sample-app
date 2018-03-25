@@ -1,6 +1,7 @@
 # Sample Angular Web application
 
 * This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3
+* Firebase function project was generated with [Firebase CLI](https://firebase.google.com/docs/cli/)
 * It uses [Angular](https://angular.io) javascript framework version 5.x
 * It uses [Angular Material 2](https://material.angular.io) components, styles, fonts and icons
 * It uses [Angular Flex Layout](https://github.com/angular/flex-layout/wiki) for Responsive layout
@@ -9,9 +10,14 @@
 ### Run locally
 
 ```
-yarn install
-yarn start
-npm run api
+Angular App
+ yarn install
+ yarn start
+ npm run api
+
+Firebase function
+ npm run compile-functions   (compile only)
+ npm run deploy-functions    (compile and deploy)
 ```
 
 ```
@@ -141,6 +147,45 @@ Windows:
 Mac:
 ```
 
+### Adding project to Github
+
+```
+git init
+git add .
+git commit -m "initial commit"
+git remote add origin git@github.com:ketangit/sample-app.git
+git push -u origin master
+```
+
+### Add below in package.json for firebase functions
+
+```
+  npm install -g firebase-tools
+
+  "compile-functions": "rmdir /s/q functions\\lib & tsc --project functions"
+  "dependencies": {
+    "express": "^4.16.2",
+    "firebase-admin": "^5.8.2",
+    "firebase-functions": "^0.8.1",
+    "fs-extra": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.11.1",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1"
+  }
+```
+
+### API Endpoints (sample data)
+
+* https://us-central1-sample-app-3.cloudfunctions.net/api/data/categories
+* https://us-central1-sample-app-3.cloudfunctions.net/api/data/questions
+* https://us-central1-sample-app-3.cloudfunctions.net/api/data/tagList
+* https://us-central1-sample-app-3.cloudfunctions.net/api/data/departments
+* https://us-central1-sample-app-3.cloudfunctions.net/api/data/engines
+* https://us-central1-sample-app-3.cloudfunctions.net/api/data/tasks
+* https://us-central1-sample-app-3.cloudfunctions.net/api/data/jobs
+
 ### Credit / Prior Art
 
 * https://www.sitepoint.com/beginners-guide-node-package-manager/
@@ -153,3 +198,5 @@ Mac:
 * https://loiane.com/2017/09/continuous-integration-with-angular-cli-travis-ci-firebase-greenkeeper-github/
 * https://blog.angular-university.io/angular-material-data-table/
 * https://stackblitz.com/edit/angular-material2-table?file=app%2Fapp.component.html
+* https://firebase.google.com/docs/functions/typescript
+* https://codeburst.io/graphql-server-on-cloud-functions-for-firebase-ae97441399c0
