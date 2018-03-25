@@ -12,4 +12,8 @@ export class JobService {
   getTasks(): Observable<Task[]> {
     return this.http.get<Task[]>(environment.api + '/tasks');
   }
+
+  getJobs(): Observable<Job[]> {
+    return this.http.get<Job[]>(environment.api + '/jobs');
+  }
 }
