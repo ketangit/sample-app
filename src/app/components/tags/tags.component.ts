@@ -1,8 +1,7 @@
 import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
-import { TagService, EngineService } from '../../services';
-import { Engine } from '../../model';
+import { TagService } from '../../services';
 
 @Component({
   selector: 'sample-tag-list',
@@ -13,22 +12,16 @@ import { Engine } from '../../model';
 export class TagsComponent implements OnInit, OnDestroy {
   tags: string[];
   sub: any;
-  subEngine: any;
-  engines: Engine[];
 
-  constructor(private tagService: TagService , private engineService: EngineService) {}
+  constructor(private tagService: TagService) {}
 
   ngOnInit() {
     this.sub = this.tagService.getTags().subscribe(tags => (this.tags = tags));
-    this.subEngine = this.engineService.getEngines().subscribe(engns => (this.engines = engns));
   }
 
   ngOnDestroy() {
     if (this.sub) {
       this.sub.unsubscribe();
-    }
-    if (this.subEngine) {
-      this.subEngine.unsubscribe();
     }
   }
 }

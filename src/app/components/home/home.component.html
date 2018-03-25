@@ -1,12 +1,11 @@
 <mat-card>
-  <button mat-fab class="page-action" [routerLink]="['/network']">
-    <mat-icon class="mat-24">add</mat-icon>
-  </button>
+  <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="10px">
 
-  <mat-card-title>Questions</mat-card-title>
-  <mat-card-content class="flex-container" fxLayoutWrap="wrap" fxLayout="row" fxLayoutAlign="center" fxLayoutAlign.xs="start">
+    <mat-card *ngFor="let engine of engines" class="flex-item mat-elevation-z8 question-card engine-theme">
+      <sample-enginecard [engine]="engine" (engineClickEvent)="onEngineClickEvent($event)" (engineStatusClickEvent)="onEngineStatusClickEvent($event)"></sample-enginecard>
+    </mat-card>
 
-    <mat-card *ngFor="let question of questions" class="flex-item question-card">
+    <mat-card *ngFor="let question of questions" class="flex-item mat-elevation-z8 question-card">
       <mat-card-header>
         <mat-card-title>
           <span *ngFor="let category of question.categories">
@@ -32,5 +31,6 @@
         </mat-chip-list>
       </mat-card-content>
     </mat-card>
-  </mat-card-content>
+
+  </div>
 </mat-card>

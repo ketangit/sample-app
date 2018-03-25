@@ -19,7 +19,8 @@ import {
   HomeComponent,
   TagsComponent,
   NetworkGraphComponent,
-  ProductComponent
+  ProductComponent,
+  EnginecardComponent
 } from './components';
 import {
   CategoryService,
@@ -37,7 +38,8 @@ import {
     HomeComponent,
     TagsComponent,
     NetworkGraphComponent,
-    ProductComponent
+    ProductComponent,
+    EnginecardComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,14 @@ import {
     FlexLayoutModule,
     MaterialModule
   ],
-  providers: [CategoryService, TagService, QuestionService, ProductService, EngineService, JobService],
+  providers: [
+    CategoryService,
+    TagService,
+    QuestionService,
+    ProductService,
+    EngineService,
+    JobService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

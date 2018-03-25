@@ -5,9 +5,4 @@
       <span>{{tag}}</span>
     </mat-list-item>
   </mat-list>
-  <mat-list dense>
-    <mat-list-item *ngFor="let engine of engines">
-      <span>{{engine.name}} {{engine.active}} {{engine.appId}} {{engine.links[0].href}} {{engine.statistics[0].statusCode}}</span>
-    </mat-list-item>
-  </mat-list>
 </mat-card>

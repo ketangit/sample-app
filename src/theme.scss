@@ -1,0 +1,18 @@
+@import '~@angular/material/theming';
+
+// always include only once per project
+@include mat-core();
+
+.engine-theme {
+  $engine-primary: mat-palette($mat-green, 500);
+  $engine-accent: mat-palette($mat-amber, 500);
+  $engine-warning: mat-palette($mat-deep-orange, A700);
+
+  $engine-theme: mat-light-theme(
+    $engine-primary,
+    $engine-accent,
+    $engine-warning
+  );
+
+  @include angular-material-theme($engine-theme);
+}

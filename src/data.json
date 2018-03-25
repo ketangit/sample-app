@@ -191,7 +191,8 @@ GET http: //localhost:8080/api/v1/engines/81/jobs/49/tasks {
 
 
 
-GET http: //localhost:8080/api/v1/engines/81/statistic/FAILED [
+GET http: //localhost:8080/api/v1/engines/81/statistic/FAILED
+[
     {
         "id": 679,
         "rootExecutionId": 678,

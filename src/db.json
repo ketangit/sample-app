@@ -199,14 +199,8 @@
         }
       ],
       "ordered": false,
-      "tags": [
-        "JavaScript",
-        "front-end",
-        "ES5"
-      ],
-      "categoryIds": [
-        2
-      ]
+      "tags": ["JavaScript", "front-end", "ES5"],
+      "categoryIds": [2]
     },
     {
       "id": 2,
@@ -234,17 +228,13 @@
         }
       ],
       "ordered": false,
-      "tags": [
-        "JavaScript",
-        "front-end"
-      ],
-      "categoryIds": [
-        2
-      ]
+      "tags": ["JavaScript", "front-end"],
+      "categoryIds": [2]
     },
     {
       "id": 3,
-      "questionText": "Which of the following function of String object returns the index within the calling String object of the first occurrence of the specified value?",
+      "questionText":
+        "Which of the following function of String object returns the index within the calling String object of the first occurrence of the specified value?",
       "answers": [
         {
           "id": 1,
@@ -268,16 +258,13 @@
         }
       ],
       "ordered": false,
-      "tags": [
-        "JavaScript"
-      ],
-      "categoryIds": [
-        2
-      ]
+      "tags": ["JavaScript"],
+      "categoryIds": [2]
     },
     {
       "id": 4,
-      "questionText": "Which of the following function of Boolean object returns a string containing the source of the Boolean object?",
+      "questionText":
+        "Which of the following function of Boolean object returns a string containing the source of the Boolean object?",
       "answers": [
         {
           "id": 1,
@@ -301,12 +288,8 @@
         }
       ],
       "ordered": false,
-      "tags": [
-        "JavaScript"
-      ],
-      "categoryIds": [
-        2
-      ]
+      "tags": ["JavaScript"],
+      "categoryIds": [2]
     },
     {
       "id": 5,
@@ -319,7 +302,8 @@
         },
         {
           "id": 2,
-          "answerText": "JavaScript can read, create, modify, and delete the cookie or cookies that apply to the current web page.",
+          "answerText":
+            "JavaScript can read, create, modify, and delete the cookie or cookies that apply to the current web page.",
           "correct": false
         },
         {
@@ -334,13 +318,8 @@
         }
       ],
       "ordered": true,
-      "tags": [
-        "JavaScript",
-        "ES5"
-      ],
-      "categoryIds": [
-        2
-      ]
+      "tags": ["JavaScript", "ES5"],
+      "categoryIds": [2]
     },
     {
       "id": 6,
@@ -368,12 +347,8 @@
         }
       ],
       "ordered": false,
-      "tags": [
-        "gaming"
-      ],
-      "categoryIds": [
-        1
-      ]
+      "tags": ["gaming"],
+      "categoryIds": [1]
     }
   ],
   "departments": [
@@ -1679,6 +1654,87 @@
           "href": "http://localhost:8080/api/v1/engines/81/statistic/FAILED"
         }
       ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": 271,
+      "name": "werwrwer-task",
+      "className": "DoneTask",
+      "size": 0,
+      "sequence": 2,
+      "disable": false,
+      "createDate": "2018-03-23 14:18:27",
+      "job": {
+        "id": 49,
+        "name": "werewrweoad",
+        "version": 4.0,
+        "disable": false,
+        "createDate": "2018-03-23 14:18:27",
+        "description": "werstem"
+      },
+      "parameters": [],
+      "immediateParentTaskId": 269,
+      "taskId": 271
+    },
+    {
+      "id": 270,
+      "name": "werrewrewask",
+      "className": "RunPentahoTransformationTask",
+      "size": 0,
+      "sequence": 1,
+      "disable": false,
+      "createDate": "2018-03-23 14:18:27",
+      "job": {
+        "id": 49,
+        "name": "werpload",
+        "version": 4.0,
+        "disable": false,
+        "createDate": "2018-03-23 14:18:27",
+        "description": "wertem"
+      },
+      "parameters": [
+        {
+          "id": 494,
+          "key": "KTR_FILE_NAME",
+          "value": "config/asdatr",
+          "type": "string"
+        },
+        {
+          "id": 495,
+          "key": "EMBEDDED_FILE",
+          "value": "true",
+          "type": "boolean"
+        },
+        {
+          "id": 496,
+          "key": "PARAM_MAP",
+          "value": "S3_asdsadat",
+          "type": "string"
+        }
+      ],
+      "immediateParentTaskId": 269,
+      "taskId": 270
+    },
+    {
+      "id": 269,
+      "name": "lasda.0",
+      "className": "RootJobTask",
+      "size": 0,
+      "sequence": 1,
+      "disable": false,
+      "createDate": "2018-03-23 14:18:27",
+      "job": {
+        "id": 49,
+        "name": "lasdsaload",
+        "version": 4.0,
+        "disable": false,
+        "createDate": "2018-03-23 14:18:27",
+        "description": "asdsastem"
+      },
+      "parameters": [],
+      "immediateParentTaskId": 269,
+      "taskId": 269
     }
   ]
 }

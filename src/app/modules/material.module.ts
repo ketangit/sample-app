@@ -20,6 +20,8 @@ import {
 } from '@angular/material';
 
 import { MatDialogModule } from '@angular/material/dialog';
+import { PlatformModule } from '@angular/cdk/platform';
+import { ObserversModule } from '@angular/cdk/observers';
 
 @NgModule({
   imports: [],
@@ -41,7 +43,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSortModule,
     MatProgressSpinnerModule,
 
-    MatDialogModule
+    MatDialogModule,
+
+    ObserversModule,
+    PlatformModule
   ]
 })
 export class MaterialModule {}

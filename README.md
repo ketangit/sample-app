@@ -146,7 +146,7 @@ Mac:
 * https://www.sitepoint.com/beginners-guide-node-package-manager/
 * https://zavoloklom.github.io/material-design-iconic-font/icons.html
 * https://material2-demoapp.firebaseapp.com/
-* https://rwa-trivia.firebaseapp.com/
+* [Real World Angular App Github source](https://github.com/anihalaney/rwa-trivia)
 * https://blog.realworldfullstack.io/real-world-angular-part-2-its-a-material-world-2d70238ef8ef
 * https://alligator.io/angular/angular-material-2/
 * https://coursetro.com/posts/code/29/Working-with-Angular-2-Material

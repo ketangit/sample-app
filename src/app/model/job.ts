@@ -1,67 +1,47 @@
-import {Engine} from './engine';
-import {Node} from 'vis';
+import { Engine } from './engine';
+import { Node } from 'vis';
 
 export class Job implements Node {
-  public tasks: Task[];
-
-  constructor(public id: number,
-              public name: string,
-              public version: number,
-              public disable: boolean,
-              public createDate: Date,
-              public description: string,
-              public engine: Engine) {
-  }
+  id: number;
+  name: string;
+  version: number;
+  disable: boolean;
+  createDate?: Date;
+  description: string;
+  engine?: Engine;
+  tasks?: Task[];
 }
 
-export class TaskDetail {
-
-  constructor(public id: number,
-              public title: string,
-              public name: string,
-              public className: string,
-              public size: number,
-              public sequence: number,
-              public disable: boolean,
-              public createDate: Date,
-              public parameters: Parameter[],
-              public version: number,
-              public description: string) {
-  }
+export interface Task {
+  DONE_TASK: 'DoneTask';
+  id: number;
+  immediateParentTaskId: number;
+  title: string;
+  name: string;
+  className: string;
+  size: number;
+  sequence: number;
+  disable: boolean;
+  createDate?: Date;
+  version: number;
+  description: string;
+  job?: Job;
+  parameters?: Parameter[];
 }
 
-export class Task {
-  public static DONE_TASK: 'DoneTask';
-
-  constructor(public id: number,
-              public name: string,
-              public className: string,
-              public size: number,
-              public sequence: number,
-              public disable: boolean,
-              public createDate: Date,
-              public job: Job,
-              public immediateParentTaskId: number,
-              public parameters: Parameter[]) {
-  }
+export interface Parameter {
+  id: number;
+  key: string;
+  value: string;
+  type: string;
 }
 
-export class Parameter {
-  constructor(public id: number,
-              public key: string,
-              public value: string,
-              public type: string) {
-  }
-}
-
-export class LoggerMessage {
-
-  constructor(public id: number,
-              public taskId: number,
-              public executionId: number,
-              public rootExecutionId: number,
-              public executionTime: Date,
-              public message: string,
-              public messageType: string) {
-  }
+export interface LoggerMessage {
+  id: number;
+  taskId: number;
+  executionId: number;
+  rootExecutionId: number;
+  executionTime?: Date;
+  message: string;
+  messageType: string;
 }
