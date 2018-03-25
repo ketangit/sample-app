@@ -20,16 +20,11 @@ import {
   TagsComponent,
   NetworkGraphComponent,
   ProductComponent,
-  EnginecardComponent
+  EnginecardComponent,
+  QuestioncardComponent
 } from './components';
-import {
-  CategoryService,
-  TagService,
-  QuestionService,
-  ProductService,
-  EngineService,
-  JobService
-} from './services';
+import { CategoryService, TagService, QuestionService, ProductService, EngineService, JobService } from './services';
+import { EnginelistComponent } from './components/enginelist/enginelist.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +34,9 @@ import {
     TagsComponent,
     NetworkGraphComponent,
     ProductComponent,
-    EnginecardComponent
+    EnginecardComponent,
+    QuestioncardComponent,
+    EnginelistComponent
   ],
   imports: [
     BrowserModule,
@@ -51,14 +48,7 @@ import {
     FlexLayoutModule,
     MaterialModule
   ],
-  providers: [
-    CategoryService,
-    TagService,
-    QuestionService,
-    ProductService,
-    EngineService,
-    JobService
-  ],
+  providers: [CategoryService, TagService, QuestionService, ProductService, EngineService, JobService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

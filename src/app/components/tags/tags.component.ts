@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 import { TagService } from '../../services';
@@ -6,8 +6,7 @@ import { TagService } from '../../services';
 @Component({
   selector: 'sample-tag-list',
   templateUrl: './tags.component.html',
-  styleUrls: ['./tags.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./tags.component.scss']
 })
 export class TagsComponent implements OnInit, OnDestroy {
   tags: string[];

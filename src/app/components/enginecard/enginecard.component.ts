@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 import { Engine, Statistics, Statuscode } from '../../model';
 
 @Component({
@@ -6,7 +6,7 @@ import { Engine, Statistics, Statuscode } from '../../model';
   templateUrl: './enginecard.component.html',
   styleUrls: ['./enginecard.component.scss']
 })
-export class EnginecardComponent implements OnInit {
+export class EnginecardComponent implements OnInit, OnDestroy {
   ENGINE_INSTANCE_REL = 'engine:instance';
   Statuscode = Statuscode; // Statuscode enum
 
@@ -24,6 +24,8 @@ export class EnginecardComponent implements OnInit {
   ngOnInit() {
     this.onLoad();
   }
+
+  ngOnDestroy() {}
 
   disabledCompletedButton(): boolean {
     return this.completedJobCount === 0;

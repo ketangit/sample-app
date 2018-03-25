@@ -1,36 +1,11 @@
-<mat-card>
-  <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="10px">
-
-    <mat-card *ngFor="let engine of engines" class="flex-item mat-elevation-z8 question-card engine-theme">
-      <sample-enginecard [engine]="engine" (engineClickEvent)="onEngineClickEvent($event)" (engineStatusClickEvent)="onEngineStatusClickEvent($event)"></sample-enginecard>
-    </mat-card>
-
-    <mat-card *ngFor="let question of questions" class="flex-item mat-elevation-z8 question-card">
-      <mat-card-header>
-        <mat-card-title>
-          <span *ngFor="let category of question.categories">
-            {{category.categoryName}}
-          </span>
-        </mat-card-title>
-        <mat-card-subtitle>
-          {{question.questionText}}
-        </mat-card-subtitle>
-      </mat-card-header>
-      <mat-card-content>
-        <mat-list dense>
-          <mat-list-item *ngFor="let answer of question.answers">
-            {{answer.answerText}}
-            <mat-icon *ngIf="answer.correct" mat-list-icon>check</mat-icon>
-          </mat-list-item>
-        </mat-list>
-
-        <mat-chip-list>
-          <mat-chip *ngFor="let tag of question.tags">
-            {{tag}}
-          </mat-chip>
-        </mat-chip-list>
-      </mat-card-content>
-    </mat-card>
-
+<div fxLayout="row" fxFill>
+  <div fxFlex="307px">
+    <sample-enginelist></sample-enginelist>
   </div>
-</mat-card>
+  <div fxFlex>
+    <!-- <sample-questioncard></sample-questioncard> -->
+    <!-- <sample-product></sample-product> -->
+    <!-- <sample-tag-list></sample-tag-list> -->
+    <sample-network-graph></sample-network-graph>
+  </div>
+</div>

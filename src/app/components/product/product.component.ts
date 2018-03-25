@@ -1,26 +1,19 @@
-import {
-  Component,
-  OnInit,
-  OnDestroy,
-  ViewEncapsulation,
-  ElementRef,
-  ViewChild
-} from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort } from '@angular/material';
+import { DataSource } from '@angular/cdk/collections';
 
 import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import 'rxjs/add/observable/merge';
 import 'rxjs/add/observable/fromEvent';
+
 import { ProductService } from '../../services';
-import { DataSource } from '@angular/cdk/collections';
 import { Department } from '../../model';
 
 @Component({
   selector: 'sample-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit, OnDestroy {
   dataSource: DepartmentDataSource | null;
@@ -39,11 +32,7 @@ export class ProductComponent implements OnInit, OnDestroy {
   ngOnDestroy() {}
 
   public loadData() {
-    this.dataSource = new DepartmentDataSource(
-      this.productService,
-      this.paginator,
-      this.sort
-    );
+    this.dataSource = new DepartmentDataSource(this.productService, this.paginator, this.sort);
 
     // Observable for the filter
     Observable.fromEvent(this.filter.nativeElement, 'keyup')
@@ -78,11 +67,7 @@ export class DepartmentDataSource extends DataSource<Department> {
   filteredData: Department[] = [];
   renderedData: Department[] = [];
 
-  constructor(
-    private productService: ProductService,
-    private _paginator: MatPaginator,
-    private _sort: MatSort
-  ) {
+  constructor(private productService: ProductService, private _paginator: MatPaginator, private _sort: MatSort) {
     super();
     // Reset to the first page when the user changes the filter.
     this._filterChange.subscribe(() => (this._paginator.pageIndex = 0));
@@ -101,27 +86,22 @@ export class DepartmentDataSource extends DataSource<Department> {
     this.productService.getAllDepartments();
     return Observable.merge(...displayDataChanges).map(() => {
       // Filter data
-      this.filteredData = this.productService.data
-        .slice()
-        .filter((department: Department) => {
-          const searchStr = (
-            department.name +
-            department.groupName +
-            department.markup +
-            department.salesTax
-          ).toLowerCase();
-          return searchStr.indexOf(this.filter.toLowerCase()) !== -1;
-        });
+      this.filteredData = this.productService.data.slice().filter((department: Department) => {
+        const searchStr = (
+          department.name +
+          department.groupName +
+          department.markup +
+          department.salesTax
+        ).toLowerCase();
+        return searchStr.indexOf(this.filter.toLowerCase()) !== -1;
+      });
 
       // Sort filtered data
       const sortedData = this.sortData(this.filteredData.slice());
 
       // Grab the page's slice of the filtered sorted data.
       const startIndex = this._paginator.pageIndex * this._paginator.pageSize;
-      this.renderedData = sortedData.splice(
-        startIndex,
-        this._paginator.pageSize
-      );
+      this.renderedData = sortedData.splice(startIndex, this._paginator.pageSize);
       return this.renderedData;
     });
   }
@@ -156,9 +136,7 @@ export class DepartmentDataSource extends DataSource<Department> {
       const valueA = isNaN(+propertyA) ? propertyA : +propertyA;
       const valueB = isNaN(+propertyB) ? propertyB : +propertyB;
 
-      return (
-        (valueA < valueB ? -1 : 1) * (this._sort.direction === 'asc' ? 1 : -1)
-      );
+      return (valueA < valueB ? -1 : 1) * (this._sort.direction === 'asc' ? 1 : -1);
     });
   }
 }

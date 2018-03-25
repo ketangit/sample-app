@@ -1,11 +1,10 @@
-import { Component, OnInit, OnDestroy, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Network, DataSet, Node, Edge, IdType } from 'vis';
 
 @Component({
   selector: 'sample-network-graph',
   templateUrl: './networkgraph.component.html',
-  styleUrls: ['./networkgraph.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./networkgraph.component.scss']
 })
 export class NetworkGraphComponent implements OnInit, OnDestroy {
   public nodes: Node;
@@ -15,7 +14,6 @@ export class NetworkGraphComponent implements OnInit, OnDestroy {
   constructor() {}
 
   ngOnInit() {
-
     this.nodes = new DataSet([
       { id: 1, label: 'Engine', group: 'engine' },
       { id: 2, label: 'Job 1', group: 'job' },
@@ -113,7 +111,6 @@ export class NetworkGraphComponent implements OnInit, OnDestroy {
       clickToUse: false,
       edges: {
         arrows: 'to',
-        color: '#1abc9c',
         shadow: true
       },
       interaction: {
