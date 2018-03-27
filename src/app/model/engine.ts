@@ -2,6 +2,7 @@ export interface Engine {
   id: string;
   name: string;
   appId: string;
+  orgName: string;
   createdDate?: Date;
   active: boolean;
   statistics?: Statistics[];

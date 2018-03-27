@@ -5,7 +5,8 @@ import {
   HomeComponent,
   TagsComponent,
   NetworkGraphComponent,
-  ProductComponent
+  ProductComponent,
+  QuestioncardComponent
 } from './components/index';
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'network', component: NetworkGraphComponent },
   { path: 'tags', component: TagsComponent },
+  { path: 'question', component: QuestioncardComponent },
   { path: 'product', component: ProductComponent },
   { path: '**', component: HomeComponent }
 ];

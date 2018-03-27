@@ -9,17 +9,17 @@ import { QuestionService } from '../../services';
 })
 export class QuestioncardComponent implements OnInit, OnDestroy {
   questions?: Question[];
-  sub: any;
+  subQuestions: any;
 
   constructor(private questionService: QuestionService) {}
 
   ngOnInit() {
-    this.sub = this.questionService.getQuestions().subscribe(questions => (this.questions = questions));
+    this.subQuestions = this.questionService.getQuestions().subscribe(values => (this.questions = values));
   }
 
   ngOnDestroy() {
-    if (this.sub) {
-      this.sub.unsubscribe();
+    if (this.subQuestions) {
+      this.subQuestions.unsubscribe();
     }
   }
 }

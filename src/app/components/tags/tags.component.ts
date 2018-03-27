@@ -10,17 +10,17 @@ import { TagService } from '../../services';
 })
 export class TagsComponent implements OnInit, OnDestroy {
   tags: string[];
-  sub: any;
+  subTags: any;
 
   constructor(private tagService: TagService) {}
 
   ngOnInit() {
-    this.sub = this.tagService.getTags().subscribe(tags => (this.tags = tags));
+    this.subTags = this.tagService.getTags().subscribe(values => (this.tags = values));
   }
 
   ngOnDestroy() {
-    if (this.sub) {
-      this.sub.unsubscribe();
+    if (this.subTags) {
+      this.subTags.unsubscribe();
     }
   }
 }

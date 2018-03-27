@@ -9,17 +9,17 @@ import { Engine } from '../../model';
 })
 export class EnginelistComponent implements OnInit, OnDestroy {
   engines?: Engine[];
-  subEngine: any;
+  subEngines: any;
 
   constructor(private engineService: EngineService) {}
 
   ngOnInit() {
-    this.subEngine = this.engineService.getEngines().subscribe(engines => (this.engines = engines));
+    this.subEngines = this.engineService.getEngines().subscribe(values => (this.engines = values));
   }
 
   ngOnDestroy() {
-    if (this.subEngine) {
-      this.subEngine.unsubscribe();
+    if (this.subEngines) {
+      this.subEngines.unsubscribe();
     }
   }
 

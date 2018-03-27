@@ -5,6 +5,7 @@ import { NetworkGraphComponent } from './networkgraph/networkgraph.component';
 import { ProductComponent } from './product/product.component';
 import { EnginecardComponent } from './enginecard/enginecard.component';
 import { QuestioncardComponent } from './questioncard/questioncard.component';
+import { EnginelistComponent } from './enginelist/enginelist.component';
 
 export {
   HomeComponent,
@@ -13,7 +14,8 @@ export {
   NetworkGraphComponent,
   ProductComponent,
   EnginecardComponent,
-  QuestioncardComponent
+  QuestioncardComponent,
+  EnginelistComponent
 };
 
 export default [
@@ -23,5 +25,6 @@ export default [
   NetworkGraphComponent,
   ProductComponent,
   EnginecardComponent,
-  QuestioncardComponent
+  QuestioncardComponent,
+  EnginelistComponent
 ];

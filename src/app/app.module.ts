@@ -21,10 +21,11 @@ import {
   NetworkGraphComponent,
   ProductComponent,
   EnginecardComponent,
-  QuestioncardComponent
+  QuestioncardComponent,
+  EnginelistComponent
 } from './components';
+
 import { CategoryService, TagService, QuestionService, ProductService, EngineService, JobService } from './services';
-import { EnginelistComponent } from './components/enginelist/enginelist.component';
 
 @NgModule({
   declarations: [
