@@ -9,25 +9,15 @@ import { Engine} from '../../model';
   styleUrls: ['./enginelist.component.scss']
 })
 export class EnginelistComponent implements OnInit, OnDestroy {
-  engines?: Engine[];
-  subEngines: any;
+  private engines?: Engine[];
+  private subEngines: any;
 
   constructor(private router: Router, private engineService: EngineService) {}
 
   ngOnInit() {
-    this.subEngines = this.engineService.getEngines().subscribe(valuesEngines => {
-      valuesEngines.map(engine => {
-        let engineInstanceLinks = engine.links
-          .filter(link => link.rel === 'engine:instance')
-          .map(link => link.href);
-        engine.engineInstances = new Array();
-        engineInstanceLinks.map(url => {
-          this.engineService.getEngineInstances(url).subscribe(valuesInstance => {
-            engine.engineInstances.push(valuesInstance);
-          })
-        })
-        this.engines = valuesEngines;
-      })
+    this.engineService.loadEngines();
+    this.subEngines = this.engineService.engines.subscribe(data => {
+      this.engines = data;
     });
   }
 

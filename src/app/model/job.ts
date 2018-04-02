@@ -14,7 +14,6 @@ export class Job implements Node {
 }
 
 export interface Task {
-  DONE_TASK: 'DoneTask';
   id: number;
   immediateParentTaskId: number;
   title: string;
@@ -45,17 +44,4 @@ export interface LoggerMessage {
   executionTime?: Date;
   message: string;
   messageType: string;
-}
-
-export interface TasksResult {
-  _embedded: Task[];
-}
-
-// used for java spring-data repository
-export interface ListResult<T> {
-  _embedded: EmbeddedList<T>;
-}
-
-export interface EmbeddedList<T> {
-  results: T[];
 }

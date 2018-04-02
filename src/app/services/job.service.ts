@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 
-import { Job, TasksResult } from '../model';
+import { Job, Task } from '../model';
 import { environment } from '../../environments/environment';
 
 @Injectable()
@@ -13,7 +13,7 @@ export class JobService {
     return this.http.get<Job[]>(url);
   }
 
-  getTasks(url: string): Observable<TasksResult> {
-    return this.http.get<TasksResult>(url);
+  getTasks(url: string): Observable<Task[]> {
+    return this.http.get<Task[]>(url);
   }
 }
