@@ -7,7 +7,7 @@ export interface Engine {
   active: boolean;
   statistics?: Statistics[];
   links?: Link[];
-  engineInstances?: EngineInstance[];  
+  engineInstances?: EngineInstance[];
 }
 
 export interface EngineInstance {

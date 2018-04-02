@@ -14,7 +14,7 @@ export class NetworkGraphComponent implements OnInit, OnDestroy {
   // edges?: Edge;
   network?: Network;
 
-  constructor(private route: ActivatedRoute, private engineService: EngineService, private jobService: JobService) {}
+  constructor(private route: ActivatedRoute, private engineService: EngineService, private jobService: JobService) { }
 
   ngOnInit() {
     // get Unicode from http://zavoloklom.github.io/material-design-iconic-font/icons.html
@@ -81,53 +81,51 @@ export class NetworkGraphComponent implements OnInit, OnDestroy {
         }
       }
     };
-    
+
     this.route.paramMap.subscribe(params => {
-      let engineId = params.get('id');
+      const engineId = Number (params.get('id'));
       this.engineService.getEngines().subscribe(valuesEngines => {
         valuesEngines.map(engine => {
-          let engineInstanceLinks = engine.links
+          const engineInstanceLinks = engine.links
             .filter(link => link.rel === 'engine:instance')
             .map(link => link.href);
           engine.engineInstances = new Array();
           engineInstanceLinks.map(url => {
             this.engineService.getEngineInstances(url).subscribe(valuesInstance => {
               engine.engineInstances.push(valuesInstance);
-            })
-          })
-        if(engineId == engine.id) {
-          let jobsUrl;
-          engine.links.filter(function(link) {
-            if(link.rel === 'engine:jobs') {
-              jobsUrl = link.href;
-            }
+            });
           });
-
-          this.jobService.getJobs(jobsUrl).subscribe(vlaueJobs => {
-            vlaueJobs.map(job => {
-              let jobTasksUrls = job.links
-                .filter(link => link.rel === 'job:tasks')
-                .map(link => link.href);
-              jobTasksUrls.map(url => {
-                this.jobService.getTasks(url).subscribe(response => {
-                  job.tasks = response._embedded;
-              })
-            })
-          })
-          let nodes = new DataSet(this.createNodes(engine, vlaueJobs));
-          let edges = new DataSet(this.createEdges(engine, vlaueJobs));
+          if (engineId === (engine.id) {
+            let jobsUrl;
+            engine.links.filter(function (link) {
+              if (link.rel === 'engine:jobs') {
+                jobsUrl = link.href;
+              }
+            });
+            this.jobService.getJobs(jobsUrl).subscribe(vlaueJobs => {
+              vlaueJobs.map(job => {
+                const jobTasksUrls = job.links
+                  .filter(link => link.rel === 'job:tasks')
+                  .map(link => link.href);
+                jobTasksUrls.map(url => {
+                  this.jobService.getTasks(url).subscribe(response => {
+                    job.tasks = response._embedded;
+                  });
+                });
+              });
+              const nodes = new DataSet(this.createNodes(engine, vlaueJobs));
+              const edges = new DataSet(this.createEdges(engine, vlaueJobs));
               // create a network
-          let data = {
-            nodes: nodes,
-            edges: edges
-          };
-          const container = document.getElementById('network');
-          this.network = new Network(container, data, options);
-
-          })
+              const data = {
+                nodes: nodes,
+                edges: edges
+              };
+              const container = document.getElementById('network');
+              this.network = new Network(container, data, options);
+            });
           }
-          })
-      })
+        });
+      });
     });
     /*
     this.nodes = new DataSet([
@@ -184,40 +182,38 @@ export class NetworkGraphComponent implements OnInit, OnDestroy {
 */
   }
 
-  ngOnDestroy() {}
+  ngOnDestroy() { }
 
   createNodes(engine: Engine, jobs: Job[]) {
-    let nodeValue: DataSet = new Array();
-    nodeValue.push({ id: engine.id + "engine", label: engine.name, group: "engine", title: engine.name });
-    jobs && jobs.map(job => {
-      nodeValue.push({ id: job.id + "job", label: job.name, group: "job" });
-      console.log(job);
-      //for(let task of job.tasks) {
-        //console.log(task.className);
-      //job.tasks && job.tasks.map(task => {
-        /*
-        if (task.className == task.DONE_TASK) {
-          nodeValue.push({ id: task.id + "task", label: task.name, group: "done", title: task.name });
+    console.log(engine);
+    const nodeValue: DataSet = new Array();
+    nodeValue.push({ id: engine.id + 'engine', label: engine.name, group: 'engine', title: engine.name });
+    jobs.map(job => {
+      nodeValue.push({ id: job.id + 'job', label: job.name, group: 'job' });
+      job.tasks.map(task => {
+        if (task.className === task.DONE_TASK) {
+          nodeValue.push({ id: task.id + 'task', label: task.name, group: 'done', title: task.name });
         } else {
-          nodeValue.push({ id: task.id + "task", label: task.name, group: "task", title: task.name });
-        }*/
-      //}
+          nodeValue.push({ id: task.id + 'task', label: task.name, group: 'task', title: task.name });
+        }
+      });
+      return nodeValue;
     });
-    return nodeValue;
   }
 
   createEdges(engine: Engine, jobs: Job[]) {
-    let edgeValue:DataSet = new Array();
-    jobs && jobs.map(job => {
-      edgeValue.push({ from: engine.id + "engine", to: job.id + "job" });
-      job.tasks && job.tasks.map(task => {
+    const edgeValue: DataSet = new Array();
+    jobs.map(job => {
+      edgeValue.push({ from: engine.id + 'engine', to: job.id + 'job' });
+      job.tasks.map(task => {
         if (task.immediateParentTaskId === task.id) {
-          edgeValue.push({ from: job.id + "job", to: task.id + "task" });
+          edgeValue.push({ from: job.id + 'job', to: task.id + 'task' });
         } else {
-          edgeValue.push({ from: task.immediateParentTaskId + "task", to: task.id + "task" , label: task.sequence });
+          edgeValue.push({ from: task.immediateParentTaskId + 'task', to: task.id + 'task', label: task.sequence });
         }
-      })
+      });
     });
     return edgeValue;
   }
+
 }
