@@ -7,13 +7,11 @@ import { Engine, Statistics, Statuscode } from '../../model';
   styleUrls: ['./enginecard.component.scss']
 })
 export class EnginecardComponent implements OnInit, OnDestroy {
-  ENGINE_INSTANCE_REL = 'engine:instance';
   Statuscode = Statuscode; // Statuscode enum
 
   completedJobCount = 0;
   runningJobCount = 0;
   failedJobCount = 0;
-  numberOfInstance = 0;
 
   @Input() engine: Engine;
   @Output() engineClickEvent: EventEmitter<Engine> = new EventEmitter<Engine>();
@@ -44,7 +42,13 @@ export class EnginecardComponent implements OnInit, OnDestroy {
   }
 
   onEngineStatusClick(statuscode: Statuscode) {
-    this.engineStatusClickEvent.emit(this.engine.id + '/statistic/' + Statuscode[statuscode]);
+    let statisticUrl;
+    this.engine.links.filter(function(link) {
+      if(link.rel === 'engine:statistic' && link.href.endsWith(Statuscode[statuscode])) {
+        statisticUrl = link.href;
+      }
+    });
+    this.engineStatusClickEvent.emit(statisticUrl);
   }
 
   private onLoad() {
@@ -68,11 +72,6 @@ export class EnginecardComponent implements OnInit, OnDestroy {
     if (failedValue.length > 0) {
       this.failedJobCount = failedValue[0].jobCount;
     }
-
-    // TODO populate EngineInstance -> engine.engineInstances array by using links below
-    const engineInstanceLinks = this.engine.links
-      .filter(link => link.rel === this.ENGINE_INSTANCE_REL)
-      .map(link => link.href);
-    this.numberOfInstance = engineInstanceLinks.length;
   }
+
 }

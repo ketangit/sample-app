@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { EngineService } from '../../services';
-import { Engine } from '../../model';
+import { Router } from '@angular/router';
+import { EngineService} from '../../services';
+import { Engine} from '../../model';
 
 @Component({
   selector: 'sample-enginelist',
@@ -11,10 +12,23 @@ export class EnginelistComponent implements OnInit, OnDestroy {
   engines?: Engine[];
   subEngines: any;
 
-  constructor(private engineService: EngineService) {}
+  constructor(private router: Router, private engineService: EngineService) {}
 
   ngOnInit() {
-    this.subEngines = this.engineService.getEngines().subscribe(values => (this.engines = values));
+    this.subEngines = this.engineService.getEngines().subscribe(valuesEngines => {
+      valuesEngines.map(engine => {
+        let engineInstanceLinks = engine.links
+          .filter(link => link.rel === 'engine:instance')
+          .map(link => link.href);
+        engine.engineInstances = new Array();
+        engineInstanceLinks.map(url => {
+          this.engineService.getEngineInstances(url).subscribe(valuesInstance => {
+            engine.engineInstances.push(valuesInstance);
+          })
+        })
+        this.engines = valuesEngines;
+      })
+    });
   }
 
   ngOnDestroy() {
@@ -24,7 +38,7 @@ export class EnginelistComponent implements OnInit, OnDestroy {
   }
 
   onEngineClickEvent(engine: Engine) {
-    console.log('show detrails for engine - ' + engine.name);
+    this.router.navigateByUrl('/network/' + engine.id);
   }
 
   onEngineStatusClickEvent(statisticLink: string) {

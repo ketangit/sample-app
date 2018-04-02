@@ -3,22 +3,25 @@ export interface Engine {
   name: string;
   appId: string;
   orgName: string;
-  createdDate?: Date;
+  createDate?: Date;
   active: boolean;
   statistics?: Statistics[];
   links?: Link[];
-  engineInstances?: EngineInstance[];
+  engineInstances?: EngineInstance[];  
 }
 
 export interface EngineInstance {
   id: string;
-  cpuLoad: number;
-  createdDate?: Date;
-  heapMemoryUsed: number;
+  hostName: string;
+  environment: string;
+  orgName?: string;
+  apiUrl?: string;
+  cloud: boolean;
+  heapMemoryUse?: number;
+  cpuLoad?: number;
+  createDate?: Date;
   lastUpdated?: Date;
   stoppedDate?: Date;
-  hostName: string;
-  cloud: boolean;
 }
 
 export interface Statistics {

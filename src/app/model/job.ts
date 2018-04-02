@@ -1,4 +1,4 @@
-import { Engine } from './engine';
+import { Engine, Link } from './engine';
 import { Node } from 'vis';
 
 export class Job implements Node {
@@ -10,6 +10,7 @@ export class Job implements Node {
   description: string;
   engine?: Engine;
   tasks?: Task[];
+  links?: Link[];
 }
 
 export interface Task {
@@ -44,4 +45,17 @@ export interface LoggerMessage {
   executionTime?: Date;
   message: string;
   messageType: string;
+}
+
+export interface TasksResult {
+  _embedded: Task[];
+}
+
+// used for java spring-data repository
+export interface ListResult<T> {
+  _embedded: EmbeddedList<T>;
+}
+
+export interface EmbeddedList<T> {
+  results: T[];
 }

@@ -1604,6 +1604,14 @@
         {
           "rel": "engine:statistic",
           "href": "http://localhost:8080/api/v1/engines/63/statistic/FAILED"
+        },
+        {
+          "rel": "engine:instance",
+          "href": "http://localhost:3000/instances/0f145ede-b7f1-4d59-b438-efee9c4ce7df"
+        },
+        {
+          "rel": "engine:instance",
+          "href": "http://localhost:3000/instances/c9ee2024-88cc-4869-b9df-c5a3c7552fbd"
         }
       ]
     },
@@ -1704,6 +1712,54 @@
       ]
     }
   ],
+  "instances": [
+  {
+    "id": "0f145ede-b7f1-4d59-b438-efee9c4ce7df",
+    "hostName": "gulabo2.dev.company.org",
+    "environment": "DEV.2",
+    "cpuLoad": 0.0,
+    "heapMemoryUse": 99085104,
+    "lastUpdated": "2018-03-30 18:00:19",
+    "stoppedDate": null,
+    "engine": {
+      "id": 122,
+      "name": "sample-notify-service",
+      "appId": "12234",
+      "createDate": "2018-03-28 06:08:28",
+      "statistics": [],
+      "active": false,
+      "orgName": null
+    },
+    "createDate": "2018-03-28 10:59:01",
+    "cloud": false,
+    "apiUrl": null,
+    "orgName": null,
+    "startDate": "2018-03-28"
+  } ,  {
+    "id": "c9ee2024-88cc-4869-b9df-c5a3c7552fbd",
+    "hostName": "gulabo1.dev.company.org",
+    "environment": "DEV.1",
+    "cpuLoad": 0.0,
+    "heapMemoryUse": 99085104,
+    "lastUpdated": "2018-03-30 18:00:19",
+    "stoppedDate": null,
+    "engine": {
+      "id": 122,
+      "name": "sample-notify-service",
+      "appId": "12234",
+      "createDate": "2018-03-28 06:08:28",
+      "statistics": [],
+      "active": false,
+      "orgName": null
+    },
+    "createDate": "2018-03-28 10:59:01",
+    "cloud": false,
+    "apiUrl": null,
+    "orgName": null,
+    "startDate": "2018-03-28"
+  }
+],
+
   "tasks": [
     {
       "id": 271,
