@@ -199,14 +199,8 @@
         }
       ],
       "ordered": false,
-      "tags": [
-        "JavaScript",
-        "front-end",
-        "ES5"
-      ],
-      "categoryIds": [
-        2
-      ]
+      "tags": ["JavaScript", "front-end", "ES5"],
+      "categoryIds": [2]
     },
     {
       "id": 2,
@@ -234,17 +228,13 @@
         }
       ],
       "ordered": false,
-      "tags": [
-        "JavaScript",
-        "front-end"
-      ],
-      "categoryIds": [
-        2
-      ]
+      "tags": ["JavaScript", "front-end"],
+      "categoryIds": [2]
     },
     {
       "id": 3,
-      "questionText": "Which of the following function of String object returns the index within the calling String object of the first occurrence of the specified value?",
+      "questionText":
+        "Which of the following function of String object returns the index within the calling String object of the first occurrence of the specified value?",
       "answers": [
         {
           "id": 1,
@@ -268,16 +258,13 @@
         }
       ],
       "ordered": false,
-      "tags": [
-        "JavaScript"
-      ],
-      "categoryIds": [
-        2
-      ]
+      "tags": ["JavaScript"],
+      "categoryIds": [2]
     },
     {
       "id": 4,
-      "questionText": "Which of the following function of Boolean object returns a string containing the source of the Boolean object?",
+      "questionText":
+        "Which of the following function of Boolean object returns a string containing the source of the Boolean object?",
       "answers": [
         {
           "id": 1,
@@ -301,12 +288,8 @@
         }
       ],
       "ordered": false,
-      "tags": [
-        "JavaScript"
-      ],
-      "categoryIds": [
-        2
-      ]
+      "tags": ["JavaScript"],
+      "categoryIds": [2]
     },
     {
       "id": 5,
@@ -319,7 +302,8 @@
         },
         {
           "id": 2,
-          "answerText": "JavaScript can read, create, modify, and delete the cookie or cookies that apply to the current web page.",
+          "answerText":
+            "JavaScript can read, create, modify, and delete the cookie or cookies that apply to the current web page.",
           "correct": false
         },
         {
@@ -334,13 +318,8 @@
         }
       ],
       "ordered": true,
-      "tags": [
-        "JavaScript",
-        "ES5"
-      ],
-      "categoryIds": [
-        2
-      ]
+      "tags": ["JavaScript", "ES5"],
+      "categoryIds": [2]
     },
     {
       "id": 6,
@@ -368,12 +347,8 @@
         }
       ],
       "ordered": false,
-      "tags": [
-        "gaming"
-      ],
-      "categoryIds": [
-        1
-      ]
+      "tags": ["gaming"],
+      "categoryIds": [1]
     }
   ],
   "departments": [
@@ -1612,7 +1587,7 @@
         },
         {
           "rel": "engine:jobs",
-          "href": "http://localhost:3000/jobs"
+          "href": "http://localhost:8080/api/v1/engines/63/jobs"
         },
         {
           "rel": "engine:statistic",
@@ -1738,53 +1713,53 @@
     }
   ],
   "instances": [
-    {
-      "id": "0f145ede-b7f1-4d59-b438-efee9c4ce7df",
-      "hostName": "gulabo2.dev.company.org",
-      "environment": "DEV.2",
-      "cpuLoad": 0.0,
-      "heapMemoryUse": 99085104,
-      "lastUpdated": "2018-03-30 18:00:19",
-      "stoppedDate": null,
-      "engine": {
-        "id": 122,
-        "name": "sample-notify-service",
-        "appId": "12234",
-        "createDate": "2018-03-28 06:08:28",
-        "statistics": [],
-        "active": false,
-        "orgName": null
-      },
-      "createDate": "2018-03-28 10:59:01",
-      "cloud": false,
-      "apiUrl": null,
-      "orgName": null,
-      "startDate": "2018-03-28"
+  {
+    "id": "0f145ede-b7f1-4d59-b438-efee9c4ce7df",
+    "hostName": "gulabo2.dev.company.org",
+    "environment": "DEV.2",
+    "cpuLoad": 0.0,
+    "heapMemoryUse": 99085104,
+    "lastUpdated": "2018-03-30 18:00:19",
+    "stoppedDate": null,
+    "engine": {
+      "id": 122,
+      "name": "sample-notify-service",
+      "appId": "12234",
+      "createDate": "2018-03-28 06:08:28",
+      "statistics": [],
+      "active": false,
+      "orgName": null
     },
-    {
-      "id": "c9ee2024-88cc-4869-b9df-c5a3c7552fbd",
-      "hostName": "gulabo1.dev.company.org",
-      "environment": "DEV.1",
-      "cpuLoad": 0.0,
-      "heapMemoryUse": 99085104,
-      "lastUpdated": "2018-03-30 18:00:19",
-      "stoppedDate": null,
-      "engine": {
-        "id": 122,
-        "name": "sample-notify-service",
-        "appId": "12234",
-        "createDate": "2018-03-28 06:08:28",
-        "statistics": [],
-        "active": false,
-        "orgName": null
-      },
-      "createDate": "2018-03-28 10:59:01",
-      "cloud": false,
-      "apiUrl": null,
-      "orgName": null,
-      "startDate": "2018-03-28"
-    }
-  ],
+    "createDate": "2018-03-28 10:59:01",
+    "cloud": false,
+    "apiUrl": null,
+    "orgName": null,
+    "startDate": "2018-03-28"
+  } ,  {
+    "id": "c9ee2024-88cc-4869-b9df-c5a3c7552fbd",
+    "hostName": "gulabo1.dev.company.org",
+    "environment": "DEV.1",
+    "cpuLoad": 0.0,
+    "heapMemoryUse": 99085104,
+    "lastUpdated": "2018-03-30 18:00:19",
+    "stoppedDate": null,
+    "engine": {
+      "id": 122,
+      "name": "sample-notify-service",
+      "appId": "12234",
+      "createDate": "2018-03-28 06:08:28",
+      "statistics": [],
+      "active": false,
+      "orgName": null
+    },
+    "createDate": "2018-03-28 10:59:01",
+    "cloud": false,
+    "apiUrl": null,
+    "orgName": null,
+    "startDate": "2018-03-28"
+  }
+],
+
   "tasks": [
     {
       "id": 271,
@@ -7733,7 +7708,8 @@
           "executionId": 638,
           "rootExecutionId": 628,
           "executionTime": "2018-03-23 15:00:25",
-          "message": "[asdsadasksjhsdf-1] Failed to calculate Capital Optimized Requirement for security: 22540AAC2. org.hibernate.exception.ConstraintViolationException: could not execute statement",
+          "message":
+            "[asdsadasksjhsdf-1] Failed to calculate Capital Optimized Requirement for security: 22540AAC2. org.hibernate.exception.ConstraintViolationException: could not execute statement",
           "messageType": "ERROR"
         },
         {

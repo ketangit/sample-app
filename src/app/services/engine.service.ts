@@ -5,9 +5,9 @@ import { Engine, EngineInstance } from '../model';
 import { environment } from '../../environments/environment';
 
 @Injectable()
-export class EngineService implements OnDestroy {
+export class EngineService implements OnDestroy{
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   ngOnDestroy() {
   }

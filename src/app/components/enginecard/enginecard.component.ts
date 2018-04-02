@@ -17,13 +17,13 @@ export class EnginecardComponent implements OnInit, OnDestroy {
   @Output() engineClickEvent: EventEmitter<Engine> = new EventEmitter<Engine>();
   @Output() engineStatusClickEvent: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
     this.onLoad();
   }
 
-  ngOnDestroy() { }
+  ngOnDestroy() {}
 
   disabledCompletedButton(): boolean {
     return this.completedJobCount === 0;
@@ -43,8 +43,8 @@ export class EnginecardComponent implements OnInit, OnDestroy {
 
   onEngineStatusClick(statuscode: Statuscode) {
     let statisticUrl;
-    this.engine.links.filter(function (link) {
-      if (link.rel === 'engine:statistic' && link.href.endsWith(Statuscode[statuscode])) {
+    this.engine.links.filter(function(link) {
+      if(link.rel === 'engine:statistic' && link.href.endsWith(Statuscode[statuscode])) {
         statisticUrl = link.href;
       }
     });
