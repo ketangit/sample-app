@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { EngineService} from '../../services';
-import { Engine} from '../../model';
+import { EngineService } from '../../services';
+import { Engine } from '../../model';
 
 @Component({
   selector: 'sample-enginelist',
@@ -9,7 +9,7 @@ import { Engine} from '../../model';
   styleUrls: ['./enginelist.component.scss']
 })
 export class EnginelistComponent implements OnInit, OnDestroy {
-  private engines?: Engine[];
+  engines?: Engine[];
   private subEngines: any;
 
   constructor(private router: Router, private engineService: EngineService) {}
@@ -28,7 +28,7 @@ export class EnginelistComponent implements OnInit, OnDestroy {
   }
 
   onEngineClickEvent(engine: Engine) {
-    this.router.navigateByUrl('/network/' + engine.id);
+    this.router.navigateByUrl('/network');
   }
 
   onEngineStatusClickEvent(statisticLink: string) {

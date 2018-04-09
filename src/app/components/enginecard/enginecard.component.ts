@@ -44,7 +44,7 @@ export class EnginecardComponent implements OnInit, OnDestroy {
   onEngineStatusClick(statuscode: Statuscode) {
     let statisticUrl;
     this.engine.links.filter(function(link) {
-      if(link.rel === 'engine:statistic' && link.href.endsWith(Statuscode[statuscode])) {
+      if (link.rel === 'engine:statistic' && link.href.endsWith(Statuscode[statuscode])) {
         statisticUrl = link.href;
       }
     });
@@ -73,5 +73,4 @@ export class EnginecardComponent implements OnInit, OnDestroy {
       this.failedJobCount = failedValue[0].jobCount;
     }
   }
-
 }
