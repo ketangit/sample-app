@@ -178,13 +178,14 @@ git push -u origin master
 
 ### API Endpoints (sample data)
 
-* https://us-central1-sample-app-3.cloudfunctions.net/api/data/categories
-* https://us-central1-sample-app-3.cloudfunctions.net/api/data/questions
-* https://us-central1-sample-app-3.cloudfunctions.net/api/data/tagList
-* https://us-central1-sample-app-3.cloudfunctions.net/api/data/departments
-* https://us-central1-sample-app-3.cloudfunctions.net/api/data/engines
-* https://us-central1-sample-app-3.cloudfunctions.net/api/data/tasks
-* https://us-central1-sample-app-3.cloudfunctions.net/api/data/jobs
+* https://sample-app-4.firebaseapp.com
+* https://us-central1-sample-app-4.cloudfunctions.net/api/data/categories
+* https://us-central1-sample-app-4.cloudfunctions.net/api/data/questions
+* https://us-central1-sample-app-4.cloudfunctions.net/api/data/tagList
+* https://us-central1-sample-app-4.cloudfunctions.net/api/data/departments
+* https://us-central1-sample-app-4.cloudfunctions.net/api/data/engines
+* https://us-central1-sample-app-4.cloudfunctions.net/api/data/tasks
+* https://us-central1-sample-app-4.cloudfunctions.net/api/data/jobs
 
 ### Credit / Prior Art
 
