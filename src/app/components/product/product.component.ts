@@ -1,5 +1,7 @@
 import { Component, OnInit, OnDestroy, ElementRef, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort } from '@angular/material';
+import { animate, state, style, transition, trigger } from '@angular/animations';
+
 import { DataSource } from '@angular/cdk/collections';
 
 import { Observable } from 'rxjs/Observable';
@@ -13,15 +15,24 @@ import { Department } from '../../model';
 @Component({
   selector: 'sample-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss']
+  styleUrls: ['./product.component.scss'],
+  animations: [
+    trigger('detailExpand', [
+      state('void', style({ height: '0px', minHeight: '0', visibility: 'hidden' })),
+      state('*', style({ height: '*', visibility: 'visible' })),
+      transition('void <=> *', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)'))
+    ])
+  ]
 })
 export class ProductComponent implements OnInit, OnDestroy {
   dataSource: DepartmentDataSource | null;
-  displayedColumns = ['name', 'groupName', 'markup', 'salesTax', 'date'];
+  displayedColumns = ['name', 'groupName', 'markup', 'salesTax', 'subDeptNum', 'date'];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild('filter') filter: ElementRef;
+
+  isExpansionDetailRow = (index, row) => row.hasOwnProperty('detailRow');
 
   constructor(private productService: ProductService) {}
 

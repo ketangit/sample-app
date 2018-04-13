@@ -12,6 +12,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialModule } from './modules/material.module';
 
+import { CdkDetailRowDirective } from './components/product/cdk-detail-row.directive';
+
 import './rxjs-extensions';
 
 import {
@@ -37,7 +39,8 @@ import { CategoryService, TagService, QuestionService, ProductService, EngineSer
     ProductComponent,
     EnginecardComponent,
     QuestioncardComponent,
-    EnginelistComponent
+    EnginelistComponent,
+    CdkDetailRowDirective
   ],
   imports: [
     BrowserModule,
