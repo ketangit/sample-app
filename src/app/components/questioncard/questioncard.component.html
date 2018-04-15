@@ -25,4 +25,9 @@
       </mat-chip-list>
     </mat-card-content>
   </mat-card>
+
+  <div *ngFor='let item of items'>
+    <sample-itemcard [item]='item'></sample-itemcard>
+  </div>
+
 </div>
