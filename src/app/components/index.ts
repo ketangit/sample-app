@@ -6,6 +6,7 @@ import { ProductComponent } from './product/product.component';
 import { EnginecardComponent } from './enginecard/enginecard.component';
 import { QuestioncardComponent } from './questioncard/questioncard.component';
 import { EnginelistComponent } from './enginelist/enginelist.component';
+import { ItemcardComponent } from './itemcard/itemcard.component';
 
 export {
   HomeComponent,
@@ -15,7 +16,8 @@ export {
   ProductComponent,
   EnginecardComponent,
   QuestioncardComponent,
-  EnginelistComponent
+  EnginelistComponent,
+  ItemcardComponent
 };
 
 export default [
@@ -26,5 +28,6 @@ export default [
   ProductComponent,
   EnginecardComponent,
   QuestioncardComponent,
-  EnginelistComponent
+  EnginelistComponent,
+  ItemcardComponent
 ];

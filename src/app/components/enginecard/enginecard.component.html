@@ -15,28 +15,27 @@
     <section *ngIf="engine.engineInstances?.length > 0">
       <div *ngFor="let engineInstance of engine.engineInstances">{{engineInstance.hostName}}</div>
     </section>
+    <mat-card-actions>
+      <div fxLayout="row" fxLayoutAlign="space-evenly center">
+        <div>
+          <div>
+            <small>Completed</small>
+          </div>
+          <button mat-mini-fab color="primary" [disabled]="disabledCompletedButton()" (click)="onEngineStatusClick(Statuscode.COMPLETED)">{{completedJobCount}}</button>
+        </div>
+        <div>
+          <div>
+            <small>Running</small>
+          </div>
+          <button mat-mini-fab color="accent" [disabled]="disabledRunningButton()" (click)="onEngineStatusClick(Statuscode.RUNNING)">{{runningJobCount}}</button>
+        </div>
+        <div>
+          <div>
+            <small>Failed</small>
+          </div>
+          <button mat-mini-fab color="warn" [disabled]="disabledFailedButton()" (click)="onEngineStatusClick(Statuscode.FAILED)">{{failedJobCount}}</button>
+        </div>
+      </div>
+    </mat-card-actions>
   </mat-card-content>
-
-  <mat-card-actions>
-    <div fxLayout="row" fxLayoutAlign="space-evenly center">
-      <div>
-        <div>
-          <small>Completed</small>
-        </div>
-        <button mat-mini-fab color="primary" [disabled]="disabledCompletedButton()" (click)="onEngineStatusClick(Statuscode.COMPLETED)">{{completedJobCount}}</button>
-      </div>
-      <div>
-        <div>
-          <small>Running</small>
-        </div>
-        <button mat-mini-fab color="accent" [disabled]="disabledRunningButton()" (click)="onEngineStatusClick(Statuscode.RUNNING)">{{runningJobCount}}</button>
-      </div>
-      <div>
-        <div>
-          <small>Failed</small>
-        </div>
-        <button mat-mini-fab color="warn" [disabled]="disabledFailedButton()" (click)="onEngineStatusClick(Statuscode.FAILED)">{{failedJobCount}}</button>
-      </div>
-    </div>
-  </mat-card-actions>
 </mat-card>

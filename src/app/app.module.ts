@@ -24,7 +24,8 @@ import {
   ProductComponent,
   EnginecardComponent,
   QuestioncardComponent,
-  EnginelistComponent
+  EnginelistComponent,
+  ItemcardComponent
 } from './components';
 
 import { CategoryService, TagService, QuestionService, ProductService, EngineService, JobService } from './services';
@@ -40,6 +41,7 @@ import { CategoryService, TagService, QuestionService, ProductService, EngineSer
     EnginecardComponent,
     QuestioncardComponent,
     EnginelistComponent,
+    ItemcardComponent,
     CdkDetailRowDirective
   ],
   imports: [

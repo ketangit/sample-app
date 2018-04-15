@@ -26,7 +26,7 @@ import { Department } from '../../model';
 })
 export class ProductComponent implements OnInit, OnDestroy {
   dataSource: DepartmentDataSource | null;
-  displayedColumns = ['name', 'groupName', 'markup', 'salesTax', 'subDeptNum', 'date'];
+  displayedColumns = ['name', 'groupName', 'markup', 'salesTax', 'numSubDepts', 'numItems', 'date'];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
