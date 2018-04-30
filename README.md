@@ -11,8 +11,8 @@
 
 ```
 Angular App
- yarn install
- yarn start
+ npm install
+ npm start
  npm run api
 
 Firebase function
@@ -29,9 +29,8 @@ npm shrinkwrap --dev
 
 ```
 Node: 8.10.0
-NPM: 5.6.0
-Yarn: 1.5.1
-Angular CLI: 1.7.3
+NPM: 6.0.0
+Angular CLI: 1.7.4
 Angular: 5.2.4
 OS: win32 x64
 ```
@@ -40,17 +39,9 @@ OS: win32 x64
 
 ```
 npm install -g @angular/cli@latest
-npm install -g yarn
-ng set --global packageManager=yarn
 ```
 
-### Upgrade Angular CLI to the latest version
-
-```
-npm install -g @angular/cli@latest
-```
-
-Or uninstall and re-install
+### uninstall and re-install Angular CLI to the latest version
 
 ```
 npm uninstall -g angular-cli
@@ -67,12 +58,6 @@ rm -rf node_modules
 npm uninstall --save-dev angular-cli
 npm install --save-dev @angular/cli@latest
 npm install
-```
-
-### Update Yarn CLI
-
-```
-npm install -g yarn
 ```
 
 ### Steps for creating this application
@@ -157,10 +142,12 @@ git remote add origin git@github.com:ketangit/sample-app.git
 git push -u origin master
 ```
 
-### Add below in package.json for firebase functions
+### Add below in package.json for firebase functions and express
 
 ```
   npm install -g firebase-tools
+  npm install --save firebase-admin firebase-functions
+  npm install --save express fs-extra @types/express
 
   "compile-functions": "rmdir /s/q functions\\lib & tsc --project functions"
   "dependencies": {
