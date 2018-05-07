@@ -78,6 +78,7 @@ Installing npm package dependencies
  npm install --save-dev json-server
 
 Creating new components
+ ng generate component components/navbar --module app
  ng generate component components/home --module app
  ng generate component components/about --module app
  ng generate component components/tags --module app
@@ -130,6 +131,20 @@ Windows:
  (Ctrl+K V) Markdown: Open Preview to the Side
 
 Mac:
+```
+
+### VSCode Extensions
+
+```
+code --list-extensions
+
+ajhyndman.jslint
+dbaeumer.vscode-eslint
+eamodio.gitlens
+esbenp.prettier-vscode
+PeterJausovec.vscode-docker
+PKief.material-icon-theme
+wesbos.theme-cobalt2
 ```
 
 ### Adding project to Github

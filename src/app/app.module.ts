@@ -27,6 +27,7 @@ import {
   EnginelistComponent,
   ItemcardComponent
 } from './components';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { CategoryService, TagService, QuestionService, ProductService, EngineService, JobService } from './services';
 
@@ -34,6 +35,7 @@ import { CategoryService, TagService, QuestionService, ProductService, EngineSer
   declarations: [
     AppComponent,
     AboutComponent,
+    NavbarComponent,
     HomeComponent,
     TagsComponent,
     NetworkGraphComponent,
