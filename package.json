@@ -12,7 +12,8 @@
     "e2e": "ng e2e",
     "api": "json-server --watch functions/db.json --routes functions/routes.json",
     "compile-functions": "rmdir /s/q functions\\lib & tsc --project functions",
-    "deploy-functions": "npm run compile-functions && firebase deploy -P default --only functions"
+    "deploy-functions": "npm run compile-functions && firebase deploy -P default --only functions",
+    "deploy-hosting": "npm run build && firebase deploy --only hosting"
   },
   "private": true,
   "dependencies": {

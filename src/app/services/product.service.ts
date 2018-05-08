@@ -23,6 +23,6 @@ export class ProductService {
   }
 
   getItems(): Observable<Item[]> {
-    return this.http.get<Item[]>(environment.api + '/items?deptId=12');
+    return this.http.get<Item[]>(environment.api + '/items?deptId=5');
   }
 }
