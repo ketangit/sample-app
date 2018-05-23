@@ -20,11 +20,6 @@ Firebase function
  npm run deploy-functions    (compile and deploy)
 ```
 
-```
-npm shrinkwrap
-npm shrinkwrap --dev
-```
-
 ### Tested with
 
 ```

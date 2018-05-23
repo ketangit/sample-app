@@ -1,22 +1,31 @@
 language: node_js
 
 node_js:
-  - node # will use latest node
+  - "9" # will use node version "9"
+
+dist: trusty
+
+cache:
+  directories:
+  - $HOME/.npm
 
 branches:
    only:
     - master # will only build for master branch commits
 
-before_script: # commands to run before the build step
-  - npm install -g --silent firebase-tools
-  - npm install -g --silent @angular/cli
+install:
+  - npm i -g npm@6.0.1
+  - npm ci
+
+# before_script: # commands to run before the build step
+#  - npm install -g --silent firebase-tools
+#  - npm install -g --silent @angular/cli
 
 script: # the build step
   - ng build --prod
 
 after_success:
   - test $TRAVIS_BRANCH = "master" && test $TRAVIS_PULL_REQUEST = "false" && firebase deploy --only hosting --token $FIREBASE_TOKEN --non-interactive
-
 
 #notifications:
 #  email: # only receive email when the build status changes (someone broke the build!) 

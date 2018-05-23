@@ -20,6 +20,7 @@ import {
 } from '@angular/material';
 
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { PlatformModule } from '@angular/cdk/platform';
 import { ObserversModule } from '@angular/cdk/observers';
 
@@ -43,6 +44,7 @@ import { ObserversModule } from '@angular/cdk/observers';
     MatSortModule,
     MatProgressSpinnerModule,
 
+    MatGridListModule,
     MatDialogModule,
 
     ObserversModule,

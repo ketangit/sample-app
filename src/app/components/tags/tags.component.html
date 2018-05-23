@@ -1,4 +1,47 @@
 <mat-card>
+  <mat-list>
+    <mat-list-item>
+      <i mat-list-avatar class="zmdi zmdi-group-work zmdi-hc-3x"></i>
+      <h3 mat-line>Title 1</h3>
+      <p mat-line>
+        <span>An awesome description group</span>
+      </p>
+    </mat-list-item>
+
+    <mat-list-item>
+      <img src="assets/logo-1.svg" height="60">
+      <h3 mat-line>Title 2</h3>
+      <p mat-line>
+        <span>Another awesome description widgets</span>
+      </p>
+    </mat-list-item>
+
+    <mat-list-item>
+      <i mat-list-avatar class="zmdi zmdi-view-column zmdi-hc-3x"></i>
+      <h3 mat-line>Title 3</h3>
+      <p mat-line>
+        <span>Yet another awesome description tabular</span>
+      </p>
+    </mat-list-item>
+  </mat-list>
+</mat-card>
+
+<!-- https://alligator.io/angular/material-design-angular-reference -->
+<mat-card>
+  <mat-grid-list cols="3">
+    <mat-grid-tile [style.border-right]="'1px dashed #ddd'">
+      John
+    </mat-grid-tile>
+    <mat-grid-tile [style.border-right]="'1px dashed #ddd'">
+      Paul
+    </mat-grid-tile>
+    <mat-grid-tile>
+      Ringo
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>
+
+<mat-card>
   <mat-card-title>Tags</mat-card-title>
   <mat-list dense>
     <mat-list-item *ngFor="let tag of tags">
